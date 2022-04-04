@@ -1,0 +1,54 @@
+<header class="header">
+    <div class="header__top">
+        <div class="header__logo">
+            <h1>FaluhStore</h1>
+        </div>
+    
+        <div class="header__search">
+            <div class="header__icon-search">
+                <fa-icon [icon]="faMagnifyingGlass"></fa-icon>
+            </div>
+            <input class="none" type="text" name="" id="">
+        </div>
+    
+        <div class="header__options">
+            <div class="header__categories">
+                <div class="header__icon-category">
+                    <fa-icon [icon]="faListUl"></fa-icon>
+                </div>
+
+                <p>Categorías</p>
+            </div>
+    
+            <a class="header__cart">
+                <div class="header__icon-cart">
+                    <fa-icon [icon]="faCartShopping"></fa-icon>
+                    <p>0</p>
+                </div>
+            </a>
+
+            <a class="header__login">
+                <div class="header__icon-login">
+                    <fa-icon [icon]="faUser"></fa-icon>
+                </div>
+                
+                <p>Iniciar Sesión</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="header__bottom">
+        <input type="checkbox" id="mobile-bar">
+        
+        <label class="header__mobile" for="mobile-bar">
+            <fa-icon class="icon-bars" [icon]="faBars"></fa-icon>
+            <fa-icon class="icon-close" [icon]="faXmark"></fa-icon>
+        </label>
+
+        <nav class="header__nav">
+            <a href="#">Todos los productos</a>
+            <a href="#">Ofertas</a>
+            <a href="#">Contáctanos</a>
+        </nav>
+    </div>
+</header>
