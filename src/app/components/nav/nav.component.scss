@@ -1,0 +1,68 @@
+/* Navegacion */
+.navigation {
+    display: grid;
+    background-color: var(--colorPrincipal);
+
+    /* Navegacion - Categorias */
+    .navigation__categories {
+        width: 100%;
+
+        .navigation__ctg {
+            position: relative;
+
+            /* Navegacion - Categorias opciones*/
+            .navigation__option {
+                display: none;
+                visibility: hidden;
+            }
+        }
+    }
+}
+
+/* Navegacion - Categorias Individuales */
+.navigation__ctg {
+    
+    /* Enlaces */
+    a {
+        color: var(--colorContenido);
+        position: relative;
+        display: inline-block;
+        padding: 2rem 1rem;
+        border-bottom: 1px solid var(--colorContenido);
+        transition: 1s ease;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        & > div {
+            display: flex;
+            z-index: 1;
+
+            p {
+                margin-left: 1rem;
+            }
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 0;
+            background-color: rgba(247, 127, 0, 0.7);
+            transition: 1s ease;
+            z-index: 0;
+        }
+
+        &:hover {
+            color: var(--colorPrincipal);
+            transition: 1s ease;
+
+            &::after {
+                width: 100%;
+            }
+        }
+    }
+}

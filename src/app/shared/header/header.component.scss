@@ -11,6 +11,18 @@
         text-align: center;
         width: 100%;
     }
+
+    /* Nav de categorias */
+    .header__nav-categories {
+        position: relative;  
+        transition: 1s ease;
+    }
+
+    /* Global */
+    .activeCategorie {
+        background-color: var(--colorContenido) !important;
+        color: var(--colorPrincipal) !important;
+    }
 }
 
 // Cabecera Arriba 
@@ -57,6 +69,11 @@
             padding: 1rem;
             border-radius: 0.5rem;
             border: 1px solid var(--colorContenido);
+            color: var(--colorContenido);
+
+            &::placeholder {
+                color: var(--colorContenido);
+            }
         }
     }
 
@@ -129,57 +146,36 @@
         }
 
         &:hover {
-            p {
-                background-color: var(--colorPrincipal) !important;
-                color: var(--colorContenido) !important;
-                transition: 1s ease;
+            .header__icon-cart { 
+                p {
+                    background-color: var(--colorPrincipal);
+                    color: var(--colorContenido);
+                    transition: 1s ease;
+                }
             }
         }
     }
 }
 
-// Cabecera Arriba 
+// Cabecera Abajo 
 .header__bottom {
     border-top: 1px solid var(--colorContenido);
     border-bottom: 1px solid var(--colorContenido);
     position: relative;
 
-    // Input - Checbox
-    #mobile-bar {
-        display: none;
-        visibility: hidden;
-    }
-
     // Cabecera mobile
     .header__mobile {
         display: inline-block;
-        color: var(--colorContenido);
         width: 100%;
+        color: var(--colorContenido);
         padding: 1rem;
         cursor: pointer;
+        transition: 1s ease;
         
         &:hover {
             background-color: var(--colorContenido);
             color: var(--colorPrincipal);
             transition: 1s ease;
-        }
-
-        // Icono - Close
-        .icon-close {
-            display: none;
-            visibility: hidden;
-        }
-    }
-
-    #mobile-bar:checked ~ .header__mobile {
-        .icon-bars {
-            display: none;
-            visibility: hidden;
-        }
-
-        .icon-close {
-            display: inline-block;
-            visibility: visible;
         }
     }
 
@@ -187,8 +183,6 @@
     .header__nav {
         position: absolute;
         top: 100%;
-        right: 100%;
-        left: -100%;
         transition: 1s ease;
 
         display: flex;
@@ -200,16 +194,16 @@
             border-bottom: 1px solid var(--colorContenido);
             color: var(--colorPrincipal);
             background-color: rgba(247, 127, 0, 0.7);
+            transition: 0.5s ease;
         
             &:last-child {
                 border-bottom: none;
             }
-        }
-    }
 
-    #mobile-bar:checked ~ .header__nav {
-        left: 0;
-        right: 0;
-        transition: 1s ease;
+            &:hover {
+                background-color: rgba(247, 127, 0, 0.9);
+                transition: 0.5s ease;
+            }
+        }
     }
 }

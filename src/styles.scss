@@ -4,8 +4,8 @@
 :root {
     --fuenteLogo: 'Jockey One', sans-serif;
     --fuenteContenido: 'Open Sans', sans-serif;
-    --colorPrincipal: #E9ECEF;
-    --colorEntorno: #F8F9FA;
+    --colorPrincipal: #F8F9FA;
+    --colorEntorno: #E9ECEF;
     --colorPrincipalOscuro: #212529;
     --colorEntornoOscuro: #343A40;
     --colorContenido: #F77F00;
@@ -39,6 +39,32 @@ body {
 
 .min-width {
     min-width: 28rem;
+}
+
+.hidden {
+    display: none;
+    visibility: hidden;
+}
+
+.visible {
+    display: inline-block;
+    visibility: visible;
+}
+
+.left-n100 {
+    left: -100%;
+} 
+
+.right-p100 {
+    right: 100%;
+}
+
+.left-none {
+    left: 0 !important;
+}
+
+.right-none {
+    right: 0 !important;
 }
 
 img {

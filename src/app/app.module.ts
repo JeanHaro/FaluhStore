@@ -13,6 +13,9 @@ import { HomeComponent } from './pages/home/home.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 
+/* Componentes */
+import { NavComponent } from './components/nav/nav.component';
+
 /* Font Awesome */
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
@@ -28,7 +31,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     ProductDetailsComponent,
     HomeComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
