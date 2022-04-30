@@ -1,6 +1,7 @@
-<div class="navigation min-width">
+<div class="navigation min-width animate__animated animate__shakeX">
     <div class="navigation__categories">
-        <div class="navigation__women navigation__ctg">
+        <div ngClass="navigation__ctg nav__women" (mouseover)="navWomen()">
+            <div class="nav__effect active-effect"></div>
             <a href="">
                 <div>
                     <fa-icon [icon]="faPersonDress"></fa-icon>
@@ -11,137 +12,13 @@
                     <fa-icon [icon]="faAngleRight"></fa-icon>
                 </div>
             </a>
-
-            <div class="navigation__option">
-                <div class="navigation__shoes">
-                    <p>Calzados</p>
-
-                    <ul>
-                        <li>
-                            <a href="">
-                                Sandalias
-                            </a> 
-                        </li>
-                        <li>
-                            <a href="">
-                                Tacos
-                            </a> 
-                        </li>
-                        <li>
-                            <a href="">
-                                Zapatillas
-                            </a> 
-                        </li>
-                        <li>
-                            <a href="">
-                                Zapatos
-                            </a> 
-                        </li>
-                        <li>
-                            <a href="">
-                                Balerinas
-                            </a> 
-                        </li>
-                        <li>
-                            <a href="">
-                                Botas
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                Mocasin
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                Pantuflas
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                Botines
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="navigation__brands">
-                    <p>Marcas</p>
-
-                    <ul>
-                        <li>
-                            <a href="">
-                                Bata
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="">
-                                Platanitos
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="">
-                                Viale
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="">
-                                Calimod
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="">
-                                Adidas
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="">
-                                Nike
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="">
-                                Converse
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="navigation__extras">
-                    <p>Extras</p>
-
-                    <ul>
-                        <li>
-                            <a href="">
-                                Nuevos
-                            </a> 
-                        </li>
-                        <li>
-                            <a href="">
-                                Ofertas
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="">
-                                Más vendidos
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
         </div>
 
-        <div class="navigation__men navigation__ctg">
+        <div class="navigation__ctg nav__men" (mouseover)="navMen()">
+            <div class="nav__effect"></div>
             <a href="">
                 <div>
-                    <fa-icon [icon]="faPersonDress"></fa-icon>
+                    <fa-icon [icon]="faPerson"></fa-icon>
                     <p>Hombre</p>
                 </div>
 
@@ -149,127 +26,13 @@
                     <fa-icon [icon]="faAngleRight"></fa-icon>
                 </div>
             </a>
-    
-            <div class="navigation__option">
-                <div class="navigation__shoes">
-                    <p>Calzados</p>
-
-                    <ul>
-                        <li>
-                            <a href="">
-                                Sandalias
-                            </a> 
-                        </li>
-                        <li>
-                            <a href="">
-                                Outdoors
-                            </a> 
-                        </li>
-                        <li>
-                            <a href="">
-                                Zapatillas
-                            </a> 
-                        </li>
-                        <li>
-                            <a href="">
-                                Zapatos
-                            </a> 
-                        </li>
-                        <li>
-                            <a href="">
-                                Mocasin
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                Pantuflas
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                Botines
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="navigation__brands">
-                    <p>Marcas</p>
-
-                    <ul>
-                        <li>
-                            <a href="">
-                                Bata
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="">
-                                Platanitos
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="">
-                                Viale
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="">
-                                Calimod
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="">
-                                Adidas
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="">
-                                Nike
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="">
-                                Converse
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="navigation__extras">
-                    <p>Extras</p>
-
-                    <ul>
-                        <li>
-                            <a href="">
-                                Nuevos
-                            </a> 
-                        </li>
-                        <li>
-                            <a href="">
-                                Ofertas
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="">
-                                Más vendidos
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
         </div>
 
-        <div class="navigation__child navigation__ctg">
+        <div class="navigation__ctg nav__child" (mouseover)="navChild()">
+            <div class="nav__effect"></div>
             <a href="">
                 <div>
-                    <fa-icon [icon]="faPersonDress"></fa-icon>
+                    <fa-icon [icon]="faChild"></fa-icon>
                     <p>Niños</p>
                 </div>
 
@@ -277,127 +40,13 @@
                     <fa-icon [icon]="faAngleRight"></fa-icon>
                 </div>
             </a>
-            
-            <div class="navigation__option">
-                <div class="navigation__shoes">
-                    <p>Calzados</p>
-
-                    <ul>
-                        <li>
-                            <a href="">
-                                Sandalias
-                            </a> 
-                        </li>
-                        <li>
-                            <a href="">
-                                Zapatillas
-                            </a> 
-                        </li>
-                        <li>
-                            <a href="">
-                                Zapatos
-                            </a> 
-                        </li>
-                        <li>
-                            <a href="">
-                                Flip FLops
-                            </a> 
-                        </li>
-                        <li>
-                            <a href="">
-                                Botas
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                Pantuflas
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                Botines
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="navigation__brands">
-                    <p>Marcas</p>
-
-                    <ul>
-                        <li>
-                            <a href="">
-                                Bata
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="">
-                                Platanitos
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="">
-                                Viale
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="">
-                                Calimod
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="">
-                                Adidas
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="">
-                                Nike
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="">
-                                Converse
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="navigation__extras">
-                    <p>Extras</p>
-
-                    <ul>
-                        <li>
-                            <a href="">
-                                Nuevos
-                            </a> 
-                        </li>
-                        <li>
-                            <a href="">
-                                Ofertas
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="">
-                                Más vendidos
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
         </div>
 
-        <div class="navigation__baby navigation__ctg">
+        <div class="navigation__ctg nav__baby" (mouseover)="navBaby()">
+            <div class="nav__effect"></div>
             <a href="">
                 <div>
-                    <fa-icon [icon]="faPersonDress"></fa-icon>
+                    <fa-icon [icon]="faBaby"></fa-icon>
                     <p>Bebes</p>
                 </div>
 
@@ -405,105 +54,458 @@
                     <fa-icon [icon]="faAngleRight"></fa-icon>
                 </div>
             </a>
-            
-            <div class="navigation__option">
-                <div class="navigation__shoes">
-                    <p>Calzados</p>
-
-                    <ul>
-                        <li>
-                            <a href="">
-                                Sandalias
-                            </a> 
-                        </li>
-                        <li>
-                            <a href="">
-                                Zapatillas
-                            </a> 
-                        </li>
-                        <li>
-                            <a href="">
-                                Pantuflas
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="navigation__brands">
-                    <p>Marcas</p>
-
-                    <ul>
-                        <li>
-                            <a href="">
-                                Bata
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="">
-                                Platanitos
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="">
-                                Viale
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="">
-                                Calimod
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="">
-                                Adidas
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="">
-                                Nike
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="">
-                                Converse
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="navigation__extras">
-                    <p>Extras</p>
-
-                    <ul>
-                        <li>
-                            <a href="">
-                                Nuevos
-                            </a> 
-                        </li>
-                        <li>
-                            <a href="">
-                                Ofertas
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="">
-                                Más vendidos
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
         </div>
     </div>
 
     <div class="navigation__content">
+        <div class="navigation__option option__women opacity-none" (mouseover)="navWomen()">
+            <div class="navigation__shoes">
+                <p>Calzados</p>
 
+                <ul>
+                    <li>
+                        <a href="">
+                            Sandalias
+                        </a> 
+                    </li>
+                    <li>
+                        <a href="">
+                            Tacos
+                        </a> 
+                    </li>
+                    <li>
+                        <a href="">
+                            Zapatillas
+                        </a> 
+                    </li>
+                    <li>
+                        <a href="">
+                            Zapatos
+                        </a> 
+                    </li>
+                    <li>
+                        <a href="">
+                            Balerinas
+                        </a> 
+                    </li>
+                    <li>
+                        <a href="">
+                            Botas
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Mocasin
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Pantuflas
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Botines
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="navigation__brands">
+                <p>Marcas</p>
+
+                <ul>
+                    <li>
+                        <a href="">
+                            Bata
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            Platanitos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            Viale
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            Calimod
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            Adidas
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            Nike
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            Converse
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="navigation__extras">
+                <p>Extras</p>
+
+                <ul>
+                    <li>
+                        <a href="">
+                            Nuevos
+                        </a> 
+                    </li>
+                    <li>
+                        <a href="">
+                            Ofertas
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            Más vendidos
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="navigation__option option__men opacity-0" (mouseover)="navMen()">
+            <div class="navigation__shoes">
+                <p>Calzados</p>
+
+                <ul>
+                    <li>
+                        <a href="">
+                            Sandalias
+                        </a> 
+                    </li>
+                    <li>
+                        <a href="">
+                            Outdoors
+                        </a> 
+                    </li>
+                    <li>
+                        <a href="">
+                            Zapatillas
+                        </a> 
+                    </li>
+                    <li>
+                        <a href="">
+                            Zapatos
+                        </a> 
+                    </li>
+                    <li>
+                        <a href="">
+                            Mocasin
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Pantuflas
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Botines
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="navigation__brands">
+                <p>Marcas</p>
+
+                <ul>
+                    <li>
+                        <a href="">
+                            Bata
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            Platanitos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            Viale
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            Calimod
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            Adidas
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            Nike
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            Converse
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="navigation__extras">
+                <p>Extras</p>
+
+                <ul>
+                    <li>
+                        <a href="">
+                            Nuevos
+                        </a> 
+                    </li>
+                    <li>
+                        <a href="">
+                            Ofertas
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            Más vendidos
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="navigation__option option__child opacity-0" (mouseover)="navChild()">
+            <div class="navigation__shoes">
+                <p>Calzados</p>
+
+                <ul>
+                    <li>
+                        <a href="">
+                            Sandalias
+                        </a> 
+                    </li>
+                    <li>
+                        <a href="">
+                            Zapatillas
+                        </a> 
+                    </li>
+                    <li>
+                        <a href="">
+                            Zapatos
+                        </a> 
+                    </li>
+                    <li>
+                        <a href="">
+                            Flip FLops
+                        </a> 
+                    </li>
+                    <li>
+                        <a href="">
+                            Botas
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Pantuflas
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            Botines
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="navigation__brands">
+                <p>Marcas</p>
+
+                <ul>
+                    <li>
+                        <a href="">
+                            Bata
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            Platanitos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            Viale
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            Calimod
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            Adidas
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            Nike
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            Converse
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="navigation__extras">
+                <p>Extras</p>
+
+                <ul>
+                    <li>
+                        <a href="">
+                            Nuevos
+                        </a> 
+                    </li>
+                    <li>
+                        <a href="">
+                            Ofertas
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            Más vendidos
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="navigation__option option__baby opacity-0" (mouseover)="navBaby()">
+            <div class="navigation__shoes">
+                <p>Calzados</p>
+
+                <ul>
+                    <li>
+                        <a href="">
+                            Sandalias
+                        </a> 
+                    </li>
+                    <li>
+                        <a href="">
+                            Zapatillas
+                        </a> 
+                    </li>
+                    <li>
+                        <a href="">
+                            Pantuflas
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="navigation__brands">
+                <p>Marcas</p>
+
+                <ul>
+                    <li>
+                        <a href="">
+                            Bata
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            Platanitos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            Viale
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            Calimod
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            Adidas
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            Nike
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            Converse
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="navigation__extras">
+                <p>Extras</p>
+
+                <ul>
+                    <li>
+                        <a href="">
+                            Nuevos
+                        </a> 
+                    </li>
+                    <li>
+                        <a href="">
+                            Ofertas
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            Más vendidos
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 </div>

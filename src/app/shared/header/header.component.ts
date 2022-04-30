@@ -10,7 +10,6 @@ import {
   faMagnifyingGlass
 } from '@fortawesome/free-solid-svg-icons';
 
-
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -61,26 +60,34 @@ export class HeaderComponent implements OnInit {
     const barMobile = document.querySelector('.header .header__mobile');
     const navBar = document.querySelector('.header .header__nav');
 
-    if (this.activeMobile || mobile) {
+    if (window.innerWidth < 768) {
+      if (this.activeMobile || mobile) {
+        navBar?.classList.remove('left-none');
+        navBar?.classList.remove('right-none');
+        navBar?.classList.add('left-n100');
+        navBar?.classList.add('right-p100');
+        barMobile?.classList.remove('activeCategorie');
+        this.faBars = faBars;
+
+        this.activeMobile = false;
+      } else {
+        navBar?.classList.add('left-none');
+        navBar?.classList.add('right-none');
+        navBar?.classList.remove('left-n100');
+        navBar?.classList.remove('right-p100');
+        barMobile?.classList.add('activeCategorie');
+        this.faBars = faXmark;
+
+        this.activeCategories(true);
+
+        this.activeMobile = true;
+      }
+    } else {
       navBar?.classList.remove('left-none');
       navBar?.classList.remove('right-none');
-      navBar?.classList.add('left-n100');
-      navBar?.classList.add('right-p100');
-      barMobile?.classList.remove('activeCategorie');
-      this.faBars = faBars;
-
-      this.activeMobile = false;
-    } else {
-      navBar?.classList.add('left-none');
-      navBar?.classList.add('right-none');
       navBar?.classList.remove('left-n100');
       navBar?.classList.remove('right-p100');
-      barMobile?.classList.add('activeCategorie');
-      this.faBars = faXmark;
-
-      this.activeCategories(true);
-
-      this.activeMobile = true;
+      barMobile?.classList.remove('activeCategorie');
     }
   }
 }

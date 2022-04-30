@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Jockey+One&family=Open+Sans:wght@400;800&display=swap');
+@import '~animate.css/animate.min';
 
 :root {
     --fuenteLogo: 'Jockey One', sans-serif;
@@ -9,6 +10,7 @@
     --colorPrincipalOscuro: #212529;
     --colorEntornoOscuro: #343A40;
     --colorContenido: #F77F00;
+    --colorNegro: #222;
 }
 
 html {
@@ -65,6 +67,16 @@ body {
 
 .right-none {
     right: 0 !important;
+}
+
+.opacity-0 {
+    opacity: 0 !important;
+    z-index: -1;
+}
+
+.opacity-none {
+    opacity: 1 !important;
+    z-index: 10;
 }
 
 img {
