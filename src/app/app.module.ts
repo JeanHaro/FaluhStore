@@ -19,7 +19,8 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { NavComponent } from './components/nav/nav.component';
 
 /* Font Awesome */
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 
 // Font Awesome
 @NgModule({
@@ -44,4 +45,4 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

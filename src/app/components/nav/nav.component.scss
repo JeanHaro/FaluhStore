@@ -123,13 +123,11 @@
 
                 a {
                     display: inline-block;
-                    color: --colorGrisOscuro;
-                    transition: 0.5s ease;
+                    color: var(--colorGrisOscuro);
                     position: relative;
 
                     &:hover {
                         color: var(--colorContenido);
-                        transition: 0.5s ease;
                         text-decoration: underline;
                     }
                 }

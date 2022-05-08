@@ -2,18 +2,10 @@
 // Cabecera
 .header {
     position: relative;
+    text-align: center;
     background-color: var(--colorPrincipal);
-    display: flex;
-    flex-direction: column;
     z-index: 10;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-
-    // Header TOP and BOTTOM
-    .header__top,
-    .header__bottom {
-        text-align: center;
-        width: 100%;
-    }
 
     /* Nav de categorias */
     .header__nav-categories {
@@ -110,10 +102,10 @@
             padding: 1rem;
             border-radius: 0.5rem;
             border: 1px solid var(--colorGrisClaro);
-            color: --colorGrisOscuro;
+            color: var(--colorGrisOscuro);
 
             &::placeholder {
-                color: --colorGrisOscuro;
+                color: var(--colorGrisOscuro);
             }
         }
     }

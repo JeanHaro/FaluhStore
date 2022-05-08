@@ -1,0 +1,140 @@
+// Pie de pagina
+.footer {
+    text-align: center;
+    background-color: var(--colorPrincipal);
+
+    // Footer TOP
+    .footer__top {
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+
+        @media (min-width: 768px) {
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 2rem 0;
+        }
+
+        h3 {
+            color: var(--colorContenido);
+            margin-bottom: 1rem;
+        }
+
+        // Footer TOP - Nosotros y Contacto
+        .footer__us,
+        .footer__contact {
+            @media (min-width: 768px) {
+                flex-basis: calc(33.33% - 1rem);
+            }
+            
+            margin-bottom: 2rem;
+        }
+    }
+
+    // Footer BOTTOM
+    .footer__bottom {
+        padding: 1rem 2rem;
+        background-color: var(--colorContenido);
+        color: var(--colorPrincipal);
+    }
+}
+
+// Footer TOP - Nosotros
+.footer__us {
+    .footer__us-list {
+        display: flex;
+        flex-direction: column;
+
+        a {
+            margin-bottom: 1rem;
+            color: var(--colorGrisOscuro);
+            
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &:hover {
+                text-decoration: underline;
+                color: var(--colorContenido);
+            }
+        }
+    }
+}
+
+// Footer TOP - Contacto
+.footer__contact {
+    .footer__contact-list {
+        div {
+            display: flex;
+            flex-direction: column;
+            color: var(--colorGrisOscuro);
+            margin-bottom: 1rem;
+
+            @media (min-width: 768px) {
+                flex-direction: row;
+                justify-content: center;
+
+                span {
+                    margin-right: 1rem;
+                }
+
+                a, li {
+                    text-align: left;
+                }
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            span {
+                margin-bottom: 0.5rem;
+            }
+
+            a {
+                color: var(--colorContenido);
+                text-decoration: underline;
+            }
+
+            li {
+                margin-bottom: 0.5rem;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    } 
+}
+
+// Footer TOP - Redes
+.footer__redes {
+    @media (min-width: 768px) {
+        flex-basis: calc(33.33% - 1rem);
+    }
+    
+    .footer__redes-list {
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            color: var(--colorGrisOscuro);
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            // Iconos
+            .footer__redes-icon {
+                margin-right: 1rem;
+                font-size: 2.5rem;
+            }
+
+            &:hover {
+                color: var(--colorContenido);
+                text-decoration: underline;
+            }
+        }
+    }
+}
