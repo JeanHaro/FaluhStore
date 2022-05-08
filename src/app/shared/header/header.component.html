@@ -3,6 +3,10 @@
         <div class="header__logo">
             <h1>FaluhStore</h1>
         </div><!-- Logo -->
+
+        <div class="header__dark-mode">
+            <fa-icon [icon]="faSun"></fa-icon>
+        </div><!-- Modo Oscuro -->
     
         <div class="header__search">
             <div class="header__icon-search">
@@ -19,14 +23,14 @@
                 </div>
 
                 <p>Categorías</p>
-            </div>
+            </div><!-- Opciones - Categorías -->
     
             <a class="header__cart">
                 <div class="header__icon-cart">
                     <fa-icon [icon]="faCartShopping"></fa-icon>
                     <p>0</p>
                 </div>
-            </a>
+            </a><!-- Opciones - Carrito -->
 
             <a class="header__login">
                 <div class="header__icon-login">
@@ -34,24 +38,23 @@
                 </div>
                 
                 <p>Iniciar Sesión</p>
-            </a>
+            </a><!-- Opciones - Login -->
         </div><!-- Opciones -->
-    </div>
+    </div><!-- Header - TOP -->
 
     <div class="header__bottom">
         <div class="header__mobile" (click)="activeBar()">
             <fa-icon class="icon-bars" [icon]="faBars"></fa-icon>
-            <!-- <fa-icon class="icon-close" [icon]="faXmark"></fa-icon> -->
-        </div>
+        </div><!-- Icono -->
 
         <nav class="header__nav left-n100 right-p100">
             <a href="#">Todos los productos</a>
             <a href="#">Ofertas</a>
             <a href="#">Contáctanos</a>
-        </nav>
-    </div>
+        </nav><!-- Navegación -->
+    </div><!-- Header - BOTTOM -->
 
-    <div class="header__nav-categories left-n100">
+    <div class="header__nav-categories left-n100 right-p100 animate__animated animate__slower">
         <app-nav></app-nav>
-    </div>
-</header>
+    </div><!-- Navegación - Categorias -->
+</header><!-- Cabecera -->

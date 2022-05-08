@@ -31,98 +31,88 @@ export class NavComponent implements OnInit {
   faAngleRight = faAngleRight;
   faRightLong = faRightLong;
 
+  // Función de añadir y remover clases
+  optionCtg (elementEffectAdd: Element | null, elementOptionAdd: Element | null, elementEffectRem: (Element | null)[], elementOptionRem: (Element | null)[]) {
+    // Add - active
+    elementEffectAdd?.classList.add('active-effect');
+
+    // Add - opacity
+    elementOptionAdd?.classList.add('opacity-none');
+
+    elementOptionRem[0]?.classList.add('opacity-0');
+    elementOptionRem[1]?.classList.add('opacity-0');
+    elementOptionRem[2]?.classList.add('opacity-0');
+
+    // Remove - active
+    elementEffectRem[0]?.classList.remove('active-effect');
+    elementEffectRem[1]?.classList.remove('active-effect');
+    elementEffectRem[2]?.classList.remove('active-effect');
+
+    // Remove - opacity
+    elementOptionAdd?.classList.remove('opacity-0');
+    
+    elementOptionRem[0]?.classList.remove('opacity-none');
+    elementOptionRem[1]?.classList.remove('opacity-none');
+    elementOptionRem[2]?.classList.remove('opacity-none');
+  }
+
+  // Mujer
   navWomen() {
-    const ctgWomen_effect = document.querySelector('.navigation__ctg.nav__women .nav__effect');
-    const ctgMen_effect = document.querySelector('.navigation__ctg.nav__men .nav__effect');
-    const ctgChild_effect = document.querySelector('.navigation__ctg.nav__child .nav__effect');
-    const ctgBaby_effect = document.querySelector('.navigation__ctg.nav__baby .nav__effect');
-
-    const optionWomen = document.querySelector('.navigation__content .option__women');
-    const optionMen = document.querySelector('.navigation__content .option__men');
-    const optionChild = document.querySelector('.navigation__content .option__child');
-    const optionBaby = document.querySelector('.navigation__content .option__baby');
-
-
     if (window.innerWidth >= 768) {
-      ctgWomen_effect?.classList.add('active-effect');
-      
-      optionWomen?.classList.add('opacity-none');
-      optionMen?.classList.add('opacity-0');
-      optionChild?.classList.add('opacity-0');
-      optionBaby?.classList.add('opacity-0');
+      // Elementos
+      const ctgWomen_effect = document.querySelector('.navigation__ctg.nav__women .nav__effect');
+      const ctgMen_effect = document.querySelector('.navigation__ctg.nav__men .nav__effect');
+      const ctgChild_effect = document.querySelector('.navigation__ctg.nav__child .nav__effect');
+      const ctgBaby_effect = document.querySelector('.navigation__ctg.nav__baby .nav__effect');
 
-      ctgMen_effect?.classList.remove('active-effect');
-      ctgChild_effect?.classList.remove('active-effect');
-      ctgBaby_effect?.classList.remove('active-effect');
-      
-      optionWomen?.classList.remove('opacity-0');
-      optionMen?.classList.remove('opacity-none');
-      optionChild?.classList.remove('opacity-none');
-      optionBaby?.classList.remove('opacity-none');
+      const optionWomen = document.querySelector('.navigation__content .option__women');
+      const optionMen = document.querySelector('.navigation__content .option__men');
+      const optionChild = document.querySelector('.navigation__content .option__child');
+      const optionBaby = document.querySelector('.navigation__content .option__baby');
+
+      this.optionCtg(ctgWomen_effect, optionWomen, [ctgMen_effect, ctgChild_effect, ctgBaby_effect], [optionMen, optionChild, optionBaby]);
     } 
   }
 
+  // Hombre
   navMen() {
-    const ctgWomen_effect = document.querySelector('.navigation__ctg.nav__women .nav__effect');
-    const ctgMen_effect = document.querySelector('.navigation__ctg.nav__men .nav__effect');
-    const ctgChild_effect = document.querySelector('.navigation__ctg.nav__child .nav__effect');
-    const ctgBaby_effect = document.querySelector('.navigation__ctg.nav__baby .nav__effect');
-
-    const optionWomen = document.querySelector('.navigation__content .option__women');
-    const optionMen = document.querySelector('.navigation__content .option__men');
-    const optionChild = document.querySelector('.navigation__content .option__child');
-    const optionBaby = document.querySelector('.navigation__content .option__baby');
-
     if (window.innerWidth >= 768) {
-      ctgMen_effect?.classList.add('active-effect');
+      // Elementos
+      const ctgWomen_effect = document.querySelector('.navigation__ctg.nav__women .nav__effect');
+      const ctgMen_effect = document.querySelector('.navigation__ctg.nav__men .nav__effect');
+      const ctgChild_effect = document.querySelector('.navigation__ctg.nav__child .nav__effect');
+      const ctgBaby_effect = document.querySelector('.navigation__ctg.nav__baby .nav__effect');
 
-      optionWomen?.classList.add('opacity-0');
-      optionMen?.classList.add('opacity-none');
-      optionChild?.classList.add('opacity-0');
-      optionBaby?.classList.add('opacity-0');
+      const optionWomen = document.querySelector('.navigation__content .option__women');
+      const optionMen = document.querySelector('.navigation__content .option__men');
+      const optionChild = document.querySelector('.navigation__content .option__child');
+      const optionBaby = document.querySelector('.navigation__content .option__baby');
 
-      ctgWomen_effect?.classList.remove('active-effect');
-      ctgChild_effect?.classList.remove('active-effect');
-      ctgBaby_effect?.classList.remove('active-effect');
-
-      optionWomen?.classList.remove('opacity-none');
-      optionMen?.classList.remove('opacity-0');
-      optionChild?.classList.remove('opacity-none');
-      optionBaby?.classList.remove('opacity-none');
+      this.optionCtg(ctgMen_effect, optionMen, [ctgWomen_effect, ctgChild_effect, ctgBaby_effect], [optionWomen, optionChild, optionBaby]);
     } 
   }
 
+  // Niños
   navChild() {
-    const ctgWomen_effect = document.querySelector('.navigation__ctg.nav__women .nav__effect');
-    const ctgMen_effect = document.querySelector('.navigation__ctg.nav__men .nav__effect');
-    const ctgChild_effect = document.querySelector('.navigation__ctg.nav__child .nav__effect');
-    const ctgBaby_effect = document.querySelector('.navigation__ctg.nav__baby .nav__effect');
-
-    const optionWomen = document.querySelector('.navigation__content .option__women');
-    const optionMen = document.querySelector('.navigation__content .option__men');
-    const optionChild = document.querySelector('.navigation__content .option__child');
-    const optionBaby = document.querySelector('.navigation__content .option__baby');
-
     if (window.innerWidth >= 768) {
-      ctgChild_effect?.classList.add('active-effect');
+      // Elementos
+      const ctgWomen_effect = document.querySelector('.navigation__ctg.nav__women .nav__effect');
+      const ctgMen_effect = document.querySelector('.navigation__ctg.nav__men .nav__effect');
+      const ctgChild_effect = document.querySelector('.navigation__ctg.nav__child .nav__effect');
+      const ctgBaby_effect = document.querySelector('.navigation__ctg.nav__baby .nav__effect');
 
-      optionWomen?.classList.add('opacity-0');
-      optionMen?.classList.add('opacity-0');
-      optionChild?.classList.add('opacity-none');
-      optionBaby?.classList.add('opacity-0');
+      const optionWomen = document.querySelector('.navigation__content .option__women');
+      const optionMen = document.querySelector('.navigation__content .option__men');
+      const optionChild = document.querySelector('.navigation__content .option__child');
+      const optionBaby = document.querySelector('.navigation__content .option__baby');
 
-      ctgWomen_effect?.classList.remove('active-effect');
-      ctgMen_effect?.classList.remove('active-effect');
-      ctgBaby_effect?.classList.remove('active-effect');
-
-      optionWomen?.classList.remove('opacity-none');
-      optionMen?.classList.remove('opacity-none');
-      optionChild?.classList.remove('opacity-0');
-      optionBaby?.classList.remove('opacity-none');
+      this.optionCtg(ctgChild_effect, optionChild, [ctgWomen_effect, ctgMen_effect, ctgBaby_effect], [optionWomen, optionMen, optionBaby]);
     } 
   }
 
+  // Bebes
   navBaby() {
+    // Elementos
     const ctgWomen_effect = document.querySelector('.navigation__ctg.nav__women .nav__effect');
     const ctgMen_effect = document.querySelector('.navigation__ctg.nav__men .nav__effect');
     const ctgChild_effect = document.querySelector('.navigation__ctg.nav__child .nav__effect');
@@ -134,21 +124,7 @@ export class NavComponent implements OnInit {
     const optionBaby = document.querySelector('.navigation__content .option__baby');
 
     if (window.innerWidth >= 768) {
-      ctgBaby_effect?.classList.add('active-effect');
-
-      optionWomen?.classList.add('opacity-0');
-      optionMen?.classList.add('opacity-0');
-      optionChild?.classList.add('opacity-0');
-      optionBaby?.classList.add('opacity-none');
-
-      ctgWomen_effect?.classList.remove('active-effect');
-      ctgMen_effect?.classList.remove('active-effect');
-      ctgChild_effect?.classList.remove('active-effect');
-
-      optionWomen?.classList.remove('opacity-none');
-      optionMen?.classList.remove('opacity-none');
-      optionChild?.classList.remove('opacity-none');
-      optionBaby?.classList.remove('opacity-0');
+      this.optionCtg(ctgBaby_effect, optionBaby, [ctgWomen_effect, ctgMen_effect, ctgChild_effect], [optionWomen, optionMen, optionChild]);
     } 
   }
 }

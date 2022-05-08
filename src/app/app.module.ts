@@ -10,6 +10,8 @@ import { AllProductsComponent } from './pages/all-products/all-products.componen
 import { CartComponent } from './pages/cart/cart.component';
 import { ProductDetailsComponent } from './pages/product-details/product-details.component';
 import { HomeComponent } from './pages/home/home.component';
+
+/* Shared  */
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 

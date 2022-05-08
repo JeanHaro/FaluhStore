@@ -11,6 +11,8 @@
     --colorEntornoOscuro: #343A40;
     --colorContenido: #F77F00;
     --colorNegro: #222;
+    --colorGrisClaro: #d4d4d4;
+    --colorGrisOscuro: #6b6b6b;
 }
 
 html {
@@ -28,6 +30,7 @@ body {
     font-family: var(--fuenteContenido);
 }
 
+/* Global */
 .none {
     border: none;
     outline: none;
@@ -53,22 +56,25 @@ body {
     visibility: visible;
 }
 
+// Left
+.left-none {
+    left: 0 !important;
+}
+
 .left-n100 {
     left: -100%;
 } 
+
+// Right
+.right-none {
+    right: 0 !important;
+}
 
 .right-p100 {
     right: 100%;
 }
 
-.left-none {
-    left: 0 !important;
-}
-
-.right-none {
-    right: 0 !important;
-}
-
+// Opacity
 .opacity-0 {
     opacity: 0 !important;
     z-index: -1;

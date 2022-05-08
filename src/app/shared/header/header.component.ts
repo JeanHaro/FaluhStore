@@ -3,11 +3,13 @@ import { Component, OnInit } from '@angular/core';
 // Iconos - FontAwesome
 import { 
   faBars, 
+  faListUl,
   faXmark,
   faCartShopping,
   faUser,
-  faListUl,
-  faMagnifyingGlass
+  faMagnifyingGlass,
+  faMoon,
+  faSun
 } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -29,64 +31,84 @@ export class HeaderComponent implements OnInit {
   faUser = faUser;
   faListUl = faListUl;
   faMagnifyingGlass = faMagnifyingGlass;
+  faSun = faSun;
+  faMoon = faMoon;
 
+  // Checks
   activeCtg: boolean = false;
   activeMobile: boolean = false;
 
+  // Activar navegaciones
+  activeGlobal (element: Element | null, content: Element | null, on: Boolean, on2: Boolean) {
+    if (on || on2) {
+      element?.classList.add('left-n100');
+      element?.classList.remove('left-none');
+      element?.classList.add('right-p100');
+      element?.classList.remove('right-none');
+      content?.classList.remove('activeCategorie');
+    } else {
+      element?.classList.remove('left-n100');
+      element?.classList.add('left-none');
+      element?.classList.remove('right-p100');
+      element?.classList.add('right-none');
+      content?.classList.add('activeCategorie');
+    }
+  }
+
+  // Navegación - Categorias
   activeCategories (ctg: boolean = false) {
+    // Elementos
     const categories = document.querySelector('.header .header__categories');
     const list_categories = document.querySelector('.header__nav-categories');
 
+    // activeCtg = true --> hidden
     if (this.activeCtg || ctg) {
-      list_categories?.classList.add('left-n100');
-      list_categories?.classList.remove('left-none');
-      categories?.classList.remove('activeCategorie');
+      this.activeGlobal(list_categories, categories, this.activeCtg, ctg);
+
+      // Icon
       this.faListUl = faListUl;
 
       this.activeCtg = false;
     } else {
-      list_categories?.classList.add('left-none');
-      list_categories?.classList.remove('left-n100');
-      categories?.classList.add('activeCategorie');
+      this.activeGlobal(list_categories, categories, this.activeCtg, ctg);
+
+      // Icon
       this.faListUl = faXmark;
 
-      this.activeBar(true);
-
       this.activeCtg = true;
+      this.activeBar(true);
     }
   }
 
+  // Navegación - Bars
   activeBar (mobile: boolean = false) {
+    // Elementos
     const barMobile = document.querySelector('.header .header__mobile');
     const navBar = document.querySelector('.header .header__nav');
 
+    // Tamaño de la pantalla es menor a 768
     if (window.innerWidth < 768) {
       if (this.activeMobile || mobile) {
-        navBar?.classList.remove('left-none');
-        navBar?.classList.remove('right-none');
-        navBar?.classList.add('left-n100');
-        navBar?.classList.add('right-p100');
-        barMobile?.classList.remove('activeCategorie');
+        this.activeGlobal(navBar, barMobile, this.activeMobile, mobile);
+        // Icon
         this.faBars = faBars;
 
         this.activeMobile = false;
       } else {
-        navBar?.classList.add('left-none');
-        navBar?.classList.add('right-none');
-        navBar?.classList.remove('left-n100');
-        navBar?.classList.remove('right-p100');
-        barMobile?.classList.add('activeCategorie');
+        this.activeGlobal(navBar, barMobile, this.activeMobile, mobile);
+        // Icon
         this.faBars = faXmark;
 
-        this.activeCategories(true);
-
         this.activeMobile = true;
+        this.activeCategories(true);
       }
     } else {
+      this.faBars = faBars;
+
+      navBar?.classList.add('left-n100');
       navBar?.classList.remove('left-none');
+      navBar?.classList.add('right-p100');
       navBar?.classList.remove('right-none');
-      navBar?.classList.remove('left-n100');
-      navBar?.classList.remove('right-p100');
       barMobile?.classList.remove('activeCategorie');
     }
   }
