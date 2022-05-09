@@ -1,15 +1,24 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
+/* Pagina general */
 import { AppComponent } from './app.component';
-import { LoginComponent } from './auth/login/login.component';
-import { RegisterComponent } from './auth/register/register.component';
-import { NoPageFoundComponent } from './pages/no-page-found/no-page-found.component';
+
+/* Routing */
+import { AppRoutingModule } from './app-routing.module';
+
+/* Pages */
+import { HomeComponent } from './pages/home/home.component';
 import { AllProductsComponent } from './pages/all-products/all-products.component';
 import { CartComponent } from './pages/cart/cart.component';
 import { ProductDetailsComponent } from './pages/product-details/product-details.component';
-import { HomeComponent } from './pages/home/home.component';
+import { OffersComponent } from './pages/offers/offers.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import { NoPageFoundComponent } from './pages/no-page-found/no-page-found.component';
+
+/* Auth */
+import { LoginComponent } from './auth/login/login.component';
+import { RegisterComponent } from './auth/register/register.component';
 
 /* Shared  */
 import { HeaderComponent } from './shared/header/header.component';
@@ -19,8 +28,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { NavComponent } from './components/nav/nav.component';
 
 /* Font Awesome */
-import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 // Font Awesome
 @NgModule({
@@ -35,7 +43,9 @@ import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontaweso
     HomeComponent,
     HeaderComponent,
     FooterComponent,
-    NavComponent
+    NavComponent,
+    OffersComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
