@@ -29,6 +29,7 @@ import { NavComponent } from './components/nav/nav.component';
 
 /* Font Awesome */
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { PagesComponent } from './pages/pages.component';
 
 // Font Awesome
 @NgModule({
@@ -45,7 +46,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     FooterComponent,
     NavComponent,
     OffersComponent,
-    ContactComponent
+    ContactComponent,
+    PagesComponent
   ],
   imports: [
     BrowserModule,

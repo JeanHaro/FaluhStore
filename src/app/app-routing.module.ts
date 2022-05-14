@@ -6,6 +6,9 @@ import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 
 // Componentes - Pages
+// Pages - Padre
+import { PagesComponent } from './pages/pages.component';
+// Pages - Hijos
 import { HomeComponent } from './pages/home/home.component';
 import { CartComponent } from './pages/cart/cart.component';
 import { AllProductsComponent } from './pages/all-products/all-products.component';
@@ -17,19 +20,28 @@ import { NoPageFoundComponent } from './pages/no-page-found/no-page-found.compon
 // Rutas de aplicación
 const routes: Routes = [
   // Pages
-  { path: 'home', component: HomeComponent },
-  { path: 'cart', component: CartComponent },
-  { path: 'all-products', component: AllProductsComponent },
-  { path: 'product', component: ProductDetailsComponent },
-  { path: 'offers', component: OffersComponent },
-  { path: 'contact', component: ContactComponent },
+  {
+    path: '',
+    component: PagesComponent,
+    /* Rutas hijas */
+    children: [
+      { path: 'home', component: HomeComponent },
+      { path: 'cart', component: CartComponent },
+      { path: 'all-products', component: AllProductsComponent },
+      { path: 'product', component: ProductDetailsComponent },
+      { path: 'offers', component: OffersComponent },
+      { path: 'contact', component: ContactComponent },
+      // Redirección
+      { path: '', redirectTo: '/home', pathMatch: 'full' },
+    ]
+
+  },
+
   // Auth
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  
-  // Redirección
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  // No hay ruta
+
+  // No hay o no existe la ruta
   { path: '**', component: NoPageFoundComponent }
 ];
 
