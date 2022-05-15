@@ -168,13 +168,10 @@
 
             a {
                 color: var(--colorContenido);
+                text-decoration: underline;
 
                 @media (min-width: 320px) {
                     margin-left: 1rem;
-                }
-                
-                &:hover {
-                    text-decoration: underline;
                 }
             }
 

@@ -1,1 +1,81 @@
-<p>register works!</p>
+<div class="login min-width">
+    <div class="login__img"></div><!-- Imagen -->
+    
+    <form class="login__form">
+        <h1>FaluhStore</h1>
+
+        <p class="login__form-welcome">¡Únete a Nosotros!</p>
+
+        <div class="login__input">
+            <div class="login__input-icon">
+                <fa-icon [icon]="faUser"></fa-icon>
+            </div>
+            
+            <input type="text" name="" class="none" placeholder="Nombres">
+        </div><!--- Nombres -->
+
+        <div class="login__input">
+            <div class="login__input-icon">
+                <fa-icon [icon]="faUser"></fa-icon>
+            </div>
+            
+            <input type="text" name="" class="none" placeholder="Apellidos">
+        </div><!--- Apellidos -->
+
+        <div class="login__input">
+            <div class="login__input-icon">
+                <fa-icon [icon]="faEnvelope"></fa-icon>
+            </div>
+            
+            <input type="email" name="" class="none" placeholder="Correo Electrónico">
+        </div><!--- Correo Electrónico -->
+
+        <div class="login__input">
+            <div class="login__input-icon">
+                <fa-icon [icon]="faLock"></fa-icon>
+            </div>
+
+            <input type="password" name="" class="none" placeholder="Contraseña">
+        </div><!-- Contraseña -->
+
+        <div class="login__input">
+            <div class="login__input-icon">
+                <fa-icon [icon]="faLock"></fa-icon>
+            </div>
+
+            <input type="password" name="" class="none" placeholder="Confirmar contraseña">
+        </div><!-- Contraseña -->
+
+        <div class="login__extras">
+            <label for="toServices">
+                <input type="checkbox" name="" class="hidden" id="toServices">
+                <div class="login__services">
+                    <fa-icon class="login__services-icon" [icon]="faCheck"></fa-icon>
+                </div>
+                <p>Estoy de acuerdo con los <a href="#" class="login__extras-servicios">Términos y Servicios</a></p>
+            </label><!-- Servicios -->
+        </div><!-- Extras -->
+
+        <div class="login__submit">
+            <input type="submit" class="none" value="Regístrate">
+        </div><!-- Registrate -->
+
+        <div class="login__register">
+            <p>¿Tienes cuenta?</p>
+            <a href="">Inicia Sesión</a>
+        </div><!-- Inicia sesión -->
+
+        <div class="login__or">
+            <div class="login__or-line"></div>
+            <p>o</p>
+            <div class="login__or-line"></div>
+        </div>
+
+        <div class="login__social">
+            <a href="" class="login__social-google">
+                <fa-icon class="login__social-icon" [icon]="faGooglePlus"></fa-icon>
+                <p>Inicia sesión con Google</p>
+            </a>
+        </div><!-- Cuenta Google -->
+    </form><!-- Formulario -->
+</div><!-- Register -->
