@@ -179,57 +179,6 @@
                 color: var(--colorNegro);
             }
         }
-
-        // o 
-        .login__or {
-            margin: 2rem 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            @media (min-width: 768px) {
-                margin: 2rem 1.5rem;
-            }
-
-            // Lineas
-            .login__or-line {
-                border: 1px solid var(--colorGrisClaro);
-                flex-basis: calc(45% - 1px);
-            }
-
-            p {
-                text-align: center;
-                color: var(--colorGrisOscuro);
-                flex-basis: calc(10% - 1px);
-            }
-        }
-
-        // Social
-        .login__social {
-            display: flex;
-            justify-content: center;
-            
-            // Google
-            .login__social-google {
-                display: flex;
-                align-items: center;
-                padding: 1rem;
-                background-color: #DD4B39;
-                border-radius: 0.3rem;
-                color: var(--colorPrincipal);
-                transition: 0.5s ease;
-
-                &:hover {
-                    background-color: #be4636;
-                    transition: 0.5s ease;
-                }
-
-                .login__social-icon {
-                    font-size: 2rem;
-                    margin-right: 1rem;
-                }
-            }
-        }
     }
 }
 
