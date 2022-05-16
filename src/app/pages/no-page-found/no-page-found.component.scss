@@ -1,0 +1,215 @@
+// Página no encontrada
+.notFound {
+    background-image: url('../../../assets/img/404-1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+
+    @media (max-height: 498px) {
+        height: 100%;
+    }
+
+    // Contendor de 404 
+    .notFound__404 {
+        height: 100%;
+        width: auto;
+        background-color: rgba(255,255,255,0.5);
+        color: var(--colorNegro);
+
+        flex-direction: column;
+
+        // Oops
+        .notFound__oops {
+            color: var(--colorNegro);
+            font-size: 3rem;
+            font-weight: 800;
+
+            @media (min-width: 400px) {
+                font-size: 4rem;
+            }
+
+            @media (min-width: 1000px) {
+                font-size: 8rem;
+            }
+
+            @media (min-width: 2500px) {
+                font-size: 16rem;
+            }
+        }
+
+        // 404 Titulo
+        .notFound__title {
+            h1 {
+                font-size: 7.5rem;
+
+                &:nth-child(1) {
+                    margin-right: -2rem;
+                }
+
+                &:last-child {
+                    margin-left: -2rem;
+                }
+
+                @media (min-width: 400px) {
+                    font-size: 10rem;
+
+                    &:nth-child(1) {
+                        margin-right: -1rem;
+                    }
+    
+                    &:last-child {
+                        margin-left: -1rem;
+                    }
+                }
+
+                @media (min-width: 1000px) {
+                    font-size: 15rem;
+
+                    &:nth-child(1) {
+                        margin-right: 0;
+                    }
+    
+                    &:last-child {
+                        margin-left: 0;
+                    }
+                }
+
+                @media (min-width: 2500px) {
+                    font-size: 23rem;
+
+                    &:nth-child(1) {
+                        margin-right: 1rem;
+                    }
+    
+                    &:last-child {
+                        margin-left: 1rem;
+                    }
+                }
+            }
+        }
+
+        // 404 Texto
+        .notFound__text {
+            text-align: center;
+            color: var(--colorNegro);
+            font-weight: 800;
+
+            p {
+                @media (min-width: 400px) {
+                    font-size: 2rem;
+                }
+
+                @media (min-width: 2500px) {
+                    font-size: 3rem;
+                }
+            }
+        }
+
+        // Inicio
+        .notFound__button {
+            display: inline-block;
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--colorContenido);
+            color: var(--colorPrincipal);
+            border-radius: 1rem;
+            transition: 0.5s ease;
+
+            &:hover {
+                background-color: var(--colorContenidoOscuro);
+                transition: 0.5s ease;
+            }
+
+            @media (min-width: 1000px) {
+                padding: 2rem 3rem;
+            }
+
+            @media (min-width: 2500px) {
+                font-size: 2rem;
+                padding: 2rem 4rem;
+            }
+        }
+    }
+}
+
+//  404 Titulo
+.notFound__title {
+    // Contenedor
+    .notFound__content {
+        width: 10rem;
+        height: 10rem;
+
+        @media (min-width: 400px) {
+            width: 12rem;
+            height: 12rem;
+        }
+
+        @media (min-width: 1000px) {
+            width: 15rem;
+            height: 15rem;
+        }
+
+        @media (min-width: 2500px) {
+            width: 20rem;
+            height: 20rem;
+        }
+
+        // 0
+        .notFound__zero {
+            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+            animation: rotate 4s linear infinite;
+
+            span {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                transform: rotate(calc(72deg * var(--i)));
+
+                @media (min-width: 400px) {
+                    transform: rotate(calc(45deg * var(--i)));
+                }
+        
+                &:nth-child(n + 6) {
+                    display: none;
+                    visibility: hidden;
+
+                    @media (min-width: 400px) {
+                        display: inline-block;
+                        visibility: visible;
+                    }
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 15px;
+                    height: 15px;
+                    margin: 3rem;
+                    background-color: var(--colorNegro);
+                    border-radius: 50%;
+                    box-shadow: 0px 0px 5px var(--colorNegro),
+                    0px 5px  5px var(--colorNegro);
+                    box-sizing: border-box;
+                    transform-origin: 20px;
+                    transition: 2s;
+                }
+            }
+
+            @keyframes rotate {
+                0% {
+                    transform: rotate(0deg);
+                } 100% {
+                    transform: rotate(360deg);
+                }
+            }
+        }
+    }
+}
