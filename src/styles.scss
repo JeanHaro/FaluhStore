@@ -86,6 +86,31 @@ body {
     z-index: 10;
 }
 
+// Padding
+.padding-1 {
+    padding: 1rem;
+}
+
+.padding-2 {
+    padding: 2rem;
+}
+
+// Margin
+.margin-1-v {
+    margin: 1rem 0;
+}
+
+.margin-2-v {
+    margin: 2rem 0;
+}
+
+// flex
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 img {
     max-width: 100%;
 }
