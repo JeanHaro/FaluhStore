@@ -207,26 +207,36 @@
         // Social
         .login__social {
             display: flex;
+            align-items: center;
             justify-content: center;
             
             // Google
             .login__social-google {
                 display: flex;
                 align-items: center;
-                padding: 1rem;
-                background-color: #DD4B39;
+                padding: 1rem 2rem;
+                background-color: var(--colorGrisClaro);
                 border-radius: 0.3rem;
-                color: var(--colorPrincipal);
+                color: var(--colorNegro);
                 transition: 0.5s ease;
 
                 &:hover {
-                    background-color: #be4636;
+                    background-color: #bebebe;
                     transition: 0.5s ease;
                 }
 
-                .login__social-icon {
-                    font-size: 2rem;
+                img {
+                    width: 25px;
+                    height: 25px;
                     margin-right: 1rem;
+                }
+
+                p {
+                    font-size: 1.4rem;
+
+                    @media (min-width: 320px) {
+                        font-size: 1.6rem;
+                    }
                 }
             }
         }

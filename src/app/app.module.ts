@@ -8,50 +8,28 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 /* Pages */
-import { HomeComponent } from './pages/home/home.component';
-import { AllProductsComponent } from './pages/all-products/all-products.component';
-import { CartComponent } from './pages/cart/cart.component';
-import { ProductDetailsComponent } from './pages/product-details/product-details.component';
-import { OffersComponent } from './pages/offers/offers.component';
-import { ContactComponent } from './pages/contact/contact.component';
 import { NoPageFoundComponent } from './pages/no-page-found/no-page-found.component';
+/* Modulo - Pages */
+import { PagesModule } from './pages/pages.module';
 
 /* Auth */
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 
-/* Shared  */
-import { HeaderComponent } from './shared/header/header.component';
-import { FooterComponent } from './shared/footer/footer.component';
-
-/* Componentes */
-import { NavComponent } from './components/nav/nav.component';
-
-/* Font Awesome */
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { PagesComponent } from './pages/pages.component';
-
 // Font Awesome
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    NoPageFoundComponent,
-    AllProductsComponent,
-    CartComponent,
-    ProductDetailsComponent,
-    HomeComponent,
-    HeaderComponent,
-    FooterComponent,
-    NavComponent,
-    OffersComponent,
-    ContactComponent,
-    PagesComponent
+    NoPageFoundComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    PagesModule,
     FontAwesomeModule
   ],
   providers: [],
