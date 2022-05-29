@@ -11,6 +11,7 @@ import { NoPageFoundComponent } from './no-page-found/no-page-found.component';
 
 // Rutas de aplicación
 const routes: Routes = [
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   // No hay o no existe la ruta
   { path: '**', component: NoPageFoundComponent }
 ];

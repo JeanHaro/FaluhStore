@@ -13,17 +13,15 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 
 const routes: Routes = [
     {
-        path: '',
+        path: 'home',
         component: PagesComponent,
         children: [
-            { path: 'home', component: HomeComponent },
+            { path: '', component: HomeComponent },
             { path: 'all-products', component: AllProductsComponent },
             { path: 'cart', component: CartComponent },
             { path: 'contact', component: ContactComponent },
             { path: 'offers', component: OffersComponent },
             { path: 'product', component: ProductDetailsComponent },
-            
-            { path: '', redirectTo: '/home', pathMatch: 'full' }
         ]
     }
 ];
