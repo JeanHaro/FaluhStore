@@ -5,6 +5,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 
+// Componente - 404
+import { NoPageFoundComponent } from './no-page-found/no-page-found.component';
+
 // Componentes - Pages
 // Pages - Padre
 import { PagesComponent } from './pages/pages.component';
@@ -15,7 +18,6 @@ import { AllProductsComponent } from './pages/all-products/all-products.componen
 import { ProductDetailsComponent } from './pages/product-details/product-details.component'; 
 import { OffersComponent } from './pages/offers/offers.component';
 import { ContactComponent } from './pages/contact/contact.component';
-import { NoPageFoundComponent } from './pages/no-page-found/no-page-found.component';
 
 // Rutas de aplicación
 const routes: Routes = [
