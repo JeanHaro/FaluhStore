@@ -1,1 +1,485 @@
-<p>home works!</p>
+<div class="home min-width">
+    <swiper [pagination]="{ type: 'progressbar' }" [navigation]="true" class="mySwiper home__portada">
+        <ng-template swiperSlide>
+            <div class="home__video flex-center">
+                <video id="video" muted>
+                    <source src="../../../assets/video/shoes.mp4" type="video/mp4">
+                </video><!-- Video -->
+
+                <div class="home__video-play">
+                    <fa-icon [icon]="faPlay"></fa-icon>
+                </div><!-- Play -->
+
+                <div class="home__video-volume">
+                    <fa-icon [icon]="faVolumeXmark"></fa-icon>
+                </div><!-- Volumen -->
+            </div><!-- Portada Video -->
+        </ng-template>
+
+        <ng-template class="content-img" swiperSlide>
+            <img src="../../../assets/img/portada-1.png" alt="Portada 1">
+        </ng-template>
+
+        <ng-template class="content-img" swiperSlide>
+            <img src="../../../assets/img/portada-2.png" alt="Portada 2">
+        </ng-template>
+
+        <ng-template class="content-img" swiperSlide>
+            <img src="../../../assets/img/portada-3.png" alt="Portada 3">
+        </ng-template>
+
+        <ng-template class="content-img" swiperSlide>
+            <img src="../../../assets/img/portada-4.png" alt="Portada 4">
+        </ng-template>
+
+        <ng-template class="content-img" swiperSlide>
+            <img src="../../../assets/img/portada-5.png" alt="Portada 5">
+        </ng-template>
+    </swiper><!-- Slider - Portadas -->
+    
+    <div class="home__newProducts">
+        <h2>Nuevos Productos</h2>
+
+        <swiper
+            [slidesPerView]="4"
+            [spaceBetween]="30"
+            [slidesPerGroup]="1"
+            [loop]="true"
+            [loopFillGroupWithBlank]="true"
+            [pagination]="{ clickable: true }"
+            [navigation]="true"
+            class="mySwiper"
+            [autoplay]="{ delay: 5000, disableOnInteraction: false }"
+        >
+            <ng-template swiperSlide>
+                <div class="product__card">
+                    <img src="../../../assets/img/zapato.webp" alt="Imagen Zapatos">
+
+                    <div class="product__description">
+                        <p>Zapatos Casuales Hombre Azul</p>
+                        <p>Bata</p>
+
+                        <div class="product__description-price">
+                            <p>Precio</p>
+                            <p>S/. 30.00</p>
+                        </div>
+
+                        <button type="button">
+                            <fa-icon [icon]="faCartShopping"></fa-icon>
+                            Añadir
+                        </button>
+                    </div><!-- Información del Producto -->
+                </div><!-- Tarjeta Producto -->
+            </ng-template>
+            <ng-template swiperSlide>
+                <div class="product__card">
+                    <img src="../../../assets/img/zapato.webp" alt="Imagen Zapatos">
+
+                    <div class="product__description">
+                        <p>Zapatos Casuales Hombre Azul</p>
+                        <p>Bata</p>
+
+                        <div class="product__description-price">
+                            <p>Precio</p>
+                            <p>S/. 30.00</p>
+                        </div>
+
+                        <button type="button">
+                            <fa-icon [icon]="faCartShopping"></fa-icon>
+                            Añadir
+                        </button>
+                    </div><!-- Información del Producto -->
+                </div><!-- Tarjeta Producto -->
+            </ng-template>
+            <ng-template swiperSlide>
+                <div class="product__card">
+                    <img src="../../../assets/img/zapato.webp" alt="Imagen Zapatos">
+
+                    <div class="product__description">
+                        <p>Zapatos Casuales Hombre Azul</p>
+                        <p>Bata</p>
+
+                        <div class="product__description-price">
+                            <p>Precio</p>
+                            <p>S/. 30.00</p>
+                        </div>
+
+                        <button type="button">
+                            <fa-icon [icon]="faCartShopping"></fa-icon>
+                            Añadir
+                        </button>
+                    </div><!-- Información del Producto -->
+                </div><!-- Tarjeta Producto -->
+            </ng-template>
+            <ng-template swiperSlide>
+                <div class="product__card">
+                    <img src="../../../assets/img/zapato.webp" alt="Imagen Zapatos">
+
+                    <div class="product__description">
+                        <p>Zapatos Casuales Hombre Azul</p>
+                        <p>Bata</p>
+
+                        <div class="product__description-price">
+                            <p>Precio</p>
+                            <p>S/. 30.00</p>
+                        </div>
+
+                        <button type="button">
+                            <fa-icon [icon]="faCartShopping"></fa-icon>
+                            Añadir
+                        </button>
+                    </div><!-- Información del Producto -->
+                </div><!-- Tarjeta Producto -->
+            </ng-template>
+            <ng-template swiperSlide>
+                <div class="product__card">
+                    <img src="../../../assets/img/zapato.webp" alt="Imagen Zapatos">
+
+                    <div class="product__description">
+                        <p>Zapatos Casuales Hombre Azul</p>
+                        <p>Bata</p>
+
+                        <div class="product__description-price">
+                            <p>Precio</p>
+                            <p>S/. 30.00</p>
+                        </div>
+
+                        <button type="button">
+                            <fa-icon [icon]="faCartShopping"></fa-icon>
+                            Añadir
+                        </button>
+                    </div><!-- Información del Producto -->
+                </div><!-- Tarjeta Producto -->
+            </ng-template>
+            <ng-template swiperSlide>
+                <div class="product__card">
+                    <img src="../../../assets/img/zapato.webp" alt="Imagen Zapatos">
+
+                    <div class="product__description">
+                        <p>Zapatos Casuales Hombre Azul</p>
+                        <p>Bata</p>
+
+                        <div class="product__description-price">
+                            <p>Precio</p>
+                            <p>S/. 30.00</p>
+                        </div>
+
+                        <button type="button">
+                            <fa-icon [icon]="faCartShopping"></fa-icon>
+                            Añadir
+                        </button>
+                    </div><!-- Información del Producto -->
+                </div><!-- Tarjeta Producto -->
+            </ng-template>
+            <ng-template swiperSlide>
+                <div class="product__card">
+                    <img src="../../../assets/img/zapato.webp" alt="Imagen Zapatos">
+
+                    <div class="product__description">
+                        <p>Zapatos Casuales Hombre Azul</p>
+                        <p>Bata</p>
+
+                        <div class="product__description-price">
+                            <p>Precio</p>
+                            <p>S/. 30.00</p>
+                        </div>
+
+                        <button type="button">
+                            <fa-icon [icon]="faCartShopping"></fa-icon>
+                            Añadir
+                        </button>
+                    </div><!-- Información del Producto -->
+                </div><!-- Tarjeta Producto -->
+            </ng-template>
+        </swiper>
+    </div><!-- Productos nuevos -->
+
+    <div class="home__event">
+        <h3>Oferta de 30% de DSCTO</h3>
+
+        <div class="home__event-counter">
+            <div class="home__event-end">
+                <div class="login__or-line"></div>
+                <p>Termina en</p>
+                <div class="login__or-line"></div>
+            </div><!-- Termina -->
+
+            <div class="home__event-time">
+                <p>Días</p>
+                <p>365</p>
+            </div>
+            
+            <div class="home__event-time">
+                <p>Horas</p>
+                <p>24</p>
+            </div>
+            
+            <div class="home__event-time">
+                <p>Minutos</p>
+                <p>60</p>
+            </div>
+            
+            <div class="home__event-time">
+                <p>Segundos</p>
+                <p>60</p>
+            </div>
+        </div><!-- Contador -->
+    </div><!-- Eventos -->
+
+    <div class="home__offers">
+        <h2>Ofertas</h2>
+        
+        <swiper
+            [slidesPerView]="4"
+            [spaceBetween]="30"
+            [slidesPerGroup]="1"
+            [loop]="true"
+            [loopFillGroupWithBlank]="true"
+            [pagination]="{ clickable: true }"
+            [navigation]="true"
+            class="mySwiper"
+            [autoplay]="{ delay: 5000, disableOnInteraction: false }"
+        >
+            <ng-template swiperSlide>
+                <div class="product__card">
+                    <img src="../../../assets/img/zapato.webp" alt="Imagen Zapatos">
+
+                    <div class="product__description">
+                        <p>Zapatos Casuales Hombre Azul</p>
+                        <p>Bata</p>
+
+                        <div class="product__price-normal">
+                            <p>Precio Normal</p>
+                            <p>S/. 50.00</p>
+                        </div>
+
+                        <div class="product__price-current">
+                            <p>Precio Actual</p>
+                            <p>S/. 25.00</p>
+                        </div>
+
+                        <button type="button">
+                            <fa-icon [icon]="faCartShopping"></fa-icon>
+                            Añadir
+                        </button>
+                    </div><!-- Información del Producto -->
+                </div><!-- Tarjeta Producto -->
+            </ng-template>
+            <ng-template swiperSlide>
+                <div class="product__card">
+                    <img src="../../../assets/img/zapato.webp" alt="Imagen Zapatos">
+
+                    <div class="product__description">
+                        <p>Zapatos Casuales Hombre Azul</p>
+                        <p>Bata</p>
+
+                        <div class="product__price-normal">
+                            <p>Precio Normal</p>
+                            <p>S/. 50.00</p>
+                        </div>
+
+                        <div class="product__price-current">
+                            <p>Precio Actual</p>
+                            <p>S/. 25.00</p>
+                        </div>
+
+                        <button type="button">
+                            <fa-icon [icon]="faCartShopping"></fa-icon>
+                            Añadir
+                        </button>
+                    </div><!-- Información del Producto -->
+                </div><!-- Tarjeta Producto -->
+            </ng-template>
+            <ng-template swiperSlide>
+                <div class="product__card">
+                    <img src="../../../assets/img/zapato.webp" alt="Imagen Zapatos">
+
+                    <div class="product__description">
+                        <p>Zapatos Casuales Hombre Azul</p>
+                        <p>Bata</p>
+
+                        <div class="product__price-normal">
+                            <p>Precio Normal</p>
+                            <p>S/. 50.00</p>
+                        </div>
+
+                        <div class="product__price-current">
+                            <p>Precio Actual</p>
+                            <p>S/. 25.00</p>
+                        </div>
+
+                        <button type="button">
+                            <fa-icon [icon]="faCartShopping"></fa-icon>
+                            Añadir
+                        </button>
+                    </div><!-- Información del Producto -->
+                </div><!-- Tarjeta Producto -->
+            </ng-template>
+            <ng-template swiperSlide>
+                <div class="product__card">
+                    <img src="../../../assets/img/zapato.webp" alt="Imagen Zapatos">
+
+                    <div class="product__description">
+                        <p>Zapatos Casuales Hombre Azul</p>
+                        <p>Bata</p>
+
+                        <div class="product__price-normal">
+                            <p>Precio Normal</p>
+                            <p>S/. 50.00</p>
+                        </div>
+
+                        <div class="product__price-current">
+                            <p>Precio Actual</p>
+                            <p>S/. 25.00</p>
+                        </div>
+
+                        <button type="button">
+                            <fa-icon [icon]="faCartShopping"></fa-icon>
+                            Añadir
+                        </button>
+                    </div><!-- Información del Producto -->
+                </div><!-- Tarjeta Producto -->
+            </ng-template>
+            <ng-template swiperSlide>
+                <div class="product__card">
+                    <img src="../../../assets/img/zapato.webp" alt="Imagen Zapatos">
+
+                    <div class="product__description">
+                        <p>Zapatos Casuales Hombre Azul</p>
+                        <p>Bata</p>
+
+                        <div class="product__price-normal">
+                            <p>Precio Normal</p>
+                            <p>S/. 50.00</p>
+                        </div>
+
+                        <div class="product__price-current">
+                            <p>Precio Actual</p>
+                            <p>S/. 25.00</p>
+                        </div>
+
+                        <button type="button">
+                            <fa-icon [icon]="faCartShopping"></fa-icon>
+                            Añadir
+                        </button>
+                    </div><!-- Información del Producto -->
+                </div><!-- Tarjeta Producto -->
+            </ng-template>
+            <ng-template swiperSlide>
+                <div class="product__card">
+                    <img src="../../../assets/img/zapato.webp" alt="Imagen Zapatos">
+
+                    <div class="product__description">
+                        <p>Zapatos Casuales Hombre Azul</p>
+                        <p>Bata</p>
+
+                        <div class="product__price-normal">
+                            <p>Precio Normal</p>
+                            <p>S/. 50.00</p>
+                        </div>
+
+                        <div class="product__price-current">
+                            <p>Precio Actual</p>
+                            <p>S/. 25.00</p>
+                        </div>
+
+                        <button type="button">
+                            <fa-icon [icon]="faCartShopping"></fa-icon>
+                            Añadir
+                        </button>
+                    </div><!-- Información del Producto -->
+                </div><!-- Tarjeta Producto -->
+            </ng-template>
+            <ng-template swiperSlide>
+                <div class="product__card">
+                    <img src="../../../assets/img/zapato.webp" alt="Imagen Zapatos">
+
+                    <div class="product__description">
+                        <p>Zapatos Casuales Hombre Azul</p>
+                        <p>Bata</p>
+
+                        <div class="product__price-normal">
+                            <p>Precio Normal</p>
+                            <p>S/. 50.00</p>
+                        </div>
+
+                        <div class="product__price-current">
+                            <p>Precio Actual</p>
+                            <p>S/. 25.00</p>
+                        </div>
+
+                        <button type="button">
+                            <fa-icon [icon]="faCartShopping"></fa-icon>
+                            Añadir
+                        </button>
+                    </div><!-- Información del Producto -->
+                </div><!-- Tarjeta Producto -->
+            </ng-template>
+        </swiper>
+    </div><!-- Ofertas -->
+
+    <div class="home__sections">
+        <h2>Secciones</h2>
+
+        <div class="section__woman">
+            <h3>Mujer</h3>
+        </div>
+
+        <div class="section__woman">
+            <h3>Hombre</h3>
+        </div>
+
+        <div class="section__woman">
+            <h3>Niños</h3>
+        </div>
+
+        <div class="section__woman">
+            <h3>Bebes</h3>
+        </div>
+    </div><!-- Secciones -->
+
+    <div class="home__brands">
+        <h2>Nuestras Marcas</h2>
+
+        <div class="content__brands">
+            <img src="../../../assets/img/bata.webp" alt="Marca de Bata">
+            <img src="../../../assets/img/platanitos.svg" alt="Marca de Platanitos">
+            <img src="../../../assets/img/viale.webp" alt="Marca de Viale">
+            <img src="../../../assets/img/calimod.png" alt="Marca de Calimod">
+            <img src="../../../assets/img/adidas.png" alt="Marca de Adidas">
+            <img src="../../../assets/img/nike.png" alt="Marca de Nike">
+            <img src="../../../assets/img/Converse.png" alt="Marca de Converse">
+        </div><!-- Contenedor de las marcas -->
+    </div><!-- Marcas -->
+
+    <div class="home__benefits">
+        <h2>Beneficios</h2>
+
+        <div class="content__benefits">
+            <div>
+                <img src="../../../assets/img/ofertas.png" alt="Imagen de Ofertas">
+                <p>Ofertas Exclusivas</p>
+            </div>
+
+            <div>
+                <img src="../../../assets/img/calidad.png" alt="Imagen de Marca de Calidad">
+                <p>Marcas independientes de calidad</p>
+            </div>
+
+            <div>
+                <img src="../../../assets/img/envios.png" alt="Imagen de Envios">
+                <p>Envíos a todo el país</p>
+            </div>
+
+            <div>
+                <img src="../../../assets/img/cambios.png" alt="Imagen de Sin Costo">
+                <p>Cambios sin costos</p>
+            </div>
+
+            <div>
+                <img src="../../../assets/img/variedad.png" alt="Imagen de Variedad">
+                <p>Amplia variedad de diseños</p>
+            </div>
+        </div><!-- Contenedor de Beneficios -->
+    </div><!-- Beneficios -->
+</div>
