@@ -17,6 +17,9 @@ import { SharedModule } from '../shared/shared.module';
 /* Font Awesome */
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
+/* Swiper */
+import { SwiperModule } from 'swiper/angular';
+
 @NgModule({
   declarations: [
     AllProductsComponent,
@@ -40,7 +43,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     CommonModule,
     RouterModule,
     SharedModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    SwiperModule
   ]
 })
 export class PagesModule { }
