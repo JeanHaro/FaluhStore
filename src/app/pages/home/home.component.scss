@@ -34,6 +34,10 @@
 .swiper-button-prev,
 .swiper-button-next {
     color: var(--colorContenido);
+
+    &::after {
+        font-size: 3.5rem;
+    }
 }
 
 .swiper-pagination-progressbar .swiper-pagination-progressbar-fill,
@@ -64,7 +68,6 @@
         transition: 0.5s ease;
         
         &::after {
-            font-size: 3.5rem;
             margin: 2rem;
         }
 
@@ -141,5 +144,26 @@
         margin: 0 1rem;
         border-bottom: 4px solid var(--colorGrisClaro);
         text-align: center;
+    }
+
+    // Tarjeta Producto
+    .product__card {
+        display: flex;
+        flex-direction: column;
+
+        // Imagen del producto
+        .product__img {
+            height: 10rem;
+            padding: 0 8rem;
+            
+            img {
+                object-fit: contain;
+            }
+        }
+
+        // Información del producto
+        .product__description {
+            
+        }
     }
 }

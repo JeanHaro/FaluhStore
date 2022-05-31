@@ -41,7 +41,7 @@
         <h2>Nuevos Productos</h2>
 
         <swiper
-            [slidesPerView]="4"
+            [slidesPerView]=perviewSlide()
             [spaceBetween]="30"
             [slidesPerGroup]="1"
             [loop]="true"
@@ -53,7 +53,9 @@
         >
             <ng-template swiperSlide>
                 <div class="product__card">
-                    <img src="../../../assets/img/zapato.webp" alt="Imagen Zapatos">
+                    <div class="product__img">
+                        <img src="../../../assets/img/zapato.webp" alt="Imagen Zapatos">
+                    </div>
 
                     <div class="product__description">
                         <p>Zapatos Casuales Hombre Azul</p>
@@ -73,7 +75,9 @@
             </ng-template>
             <ng-template swiperSlide>
                 <div class="product__card">
-                    <img src="../../../assets/img/zapato.webp" alt="Imagen Zapatos">
+                    <div class="product__img">
+                        <img src="../../../assets/img/adidas.png" alt="Imagen Zapatos">
+                    </div><!-- Imagen del producto -->
 
                     <div class="product__description">
                         <p>Zapatos Casuales Hombre Azul</p>
@@ -93,7 +97,9 @@
             </ng-template>
             <ng-template swiperSlide>
                 <div class="product__card">
-                    <img src="../../../assets/img/zapato.webp" alt="Imagen Zapatos">
+                    <div class="product__img">
+                        <img src="../../../assets/img/zapatilla.webp" alt="Imagen Zapatos">
+                    </div>
 
                     <div class="product__description">
                         <p>Zapatos Casuales Hombre Azul</p>
@@ -113,7 +119,9 @@
             </ng-template>
             <ng-template swiperSlide>
                 <div class="product__card">
-                    <img src="../../../assets/img/zapato.webp" alt="Imagen Zapatos">
+                    <div class="product__img">
+                        <img src="../../../assets/img/zapatillas.png" alt="Imagen Zapatos">
+                    </div>
 
                     <div class="product__description">
                         <p>Zapatos Casuales Hombre Azul</p>
@@ -133,7 +141,9 @@
             </ng-template>
             <ng-template swiperSlide>
                 <div class="product__card">
-                    <img src="../../../assets/img/zapato.webp" alt="Imagen Zapatos">
+                    <div class="product__img">
+                        <img src="../../../assets/img/zapatillas.png" alt="Imagen Zapatos">
+                    </div>
 
                     <div class="product__description">
                         <p>Zapatos Casuales Hombre Azul</p>
@@ -153,7 +163,9 @@
             </ng-template>
             <ng-template swiperSlide>
                 <div class="product__card">
-                    <img src="../../../assets/img/zapato.webp" alt="Imagen Zapatos">
+                    <div class="product__img">
+                        <img src="../../../assets/img/zapatillas.png" alt="Imagen Zapatos">
+                    </div>
 
                     <div class="product__description">
                         <p>Zapatos Casuales Hombre Azul</p>
@@ -173,7 +185,9 @@
             </ng-template>
             <ng-template swiperSlide>
                 <div class="product__card">
-                    <img src="../../../assets/img/zapato.webp" alt="Imagen Zapatos">
+                    <div class="product__img">
+                        <img src="https://coliseum.vteximg.com.br/arquivos/ids/439298-280-280/172656C-0_1.jpg?v=637829814068970000" alt="Imagen Zapatos">
+                    </div>
 
                     <div class="product__description">
                         <p>Zapatos Casuales Hombre Azul</p>
@@ -242,7 +256,7 @@
         >
             <ng-template swiperSlide>
                 <div class="product__card">
-                    <img src="../../../assets/img/zapato.webp" alt="Imagen Zapatos">
+                    <img src="../../../assets/img/zapato.png" alt="Imagen Zapatos">
 
                     <div class="product__description">
                         <p>Zapatos Casuales Hombre Azul</p>

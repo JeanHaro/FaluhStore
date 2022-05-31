@@ -1,6 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-
-import { SwiperComponent } from 'swiper/angular';
+import { Component, OnInit, SimpleChanges, ViewEncapsulation } from '@angular/core';
 
 import SwiperCore, {Autoplay, Pagination, Navigation} from 'swiper';
 
@@ -15,7 +13,6 @@ import {
   faCartShopping
 } from '@fortawesome/free-solid-svg-icons';
 
-
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -27,6 +24,9 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    setInterval(() => {
+      this.perviewSlide()
+    });
   }
 
   // Iconos
@@ -36,4 +36,20 @@ export class HomeComponent implements OnInit {
   faVolumeLow = faVolumeLow;
   faVolumeXmark = faVolumeXmark;
   faCartShopping = faCartShopping;
+
+  perviewSlide(): number {
+    if (window.innerWidth < 768) {
+      let perview = 1;
+      return perview;
+    } else if (window.innerWidth < 900) { 
+      let perview = 2;
+      return perview;
+    } else if (window.innerWidth < 1200) {
+      let perview = 4;
+      return perview;
+    } else {
+      let perview = 6;
+      return perview;
+    }
+  }
 }
