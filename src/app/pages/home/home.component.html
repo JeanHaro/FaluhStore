@@ -1,18 +1,24 @@
 <div class="home min-width">
     <swiper [pagination]="{ type: 'progressbar' }" [navigation]="true" class="mySwiper home__portada">
         <ng-template swiperSlide>
-            <div class="home__video flex-center">
-                <video id="video" muted>
+            <div class="home__video flex-center width-100 height-100">
+                <video id="video" class="width-100 height-100" muted>
                     <source src="../../../assets/video/shoes.mp4" type="video/mp4">
                 </video><!-- Video -->
 
-                <div class="home__video-play">
-                    <fa-icon [icon]="faPlay"></fa-icon>
-                </div><!-- Play -->
+                <div class="home__video-controls flex-center">
+                    <div class="home__video-expand cursor transition">
+                        <fa-icon [icon]="faExpand"></fa-icon>
+                    </div><!-- Expand -->
 
-                <div class="home__video-volume">
-                    <fa-icon [icon]="faVolumeXmark"></fa-icon>
-                </div><!-- Volumen -->
+                    <div class="home__video-play margin-2 cursor">
+                        <fa-icon [icon]="faPlay"></fa-icon>
+                    </div><!-- Play -->
+    
+                    <div class="home__video-volume cursor transition">
+                        <fa-icon [icon]="faVolumeXmark"></fa-icon>
+                    </div><!-- Volumen -->
+                </div><!-- Controles -->
             </div><!-- Portada Video -->
         </ng-template>
 
@@ -37,170 +43,141 @@
         </ng-template>
     </swiper><!-- Slider - Portadas -->
     
-    <div class="home__newProducts">
-        <h2>Nuevos Productos</h2>
+    <div class="home__newProducts padding-2-v contenido">
+        <h2 class="padding-1-v margin-1-h text-center">Nuevos Productos</h2>
 
         <swiper
             [slidesPerView]=perviewSlide()
-            [spaceBetween]="30"
+            [spaceBetween]="40"
             [slidesPerGroup]="1"
             [loop]="true"
             [loopFillGroupWithBlank]="true"
-            [pagination]="{ clickable: true }"
             [navigation]="true"
-            class="mySwiper"
+            class="mySwiper new__products margin-2-v"
             [autoplay]="{ delay: 5000, disableOnInteraction: false }"
         >
             <ng-template swiperSlide>
-                <div class="product__card">
-                    <div class="product__img">
-                        <img src="../../../assets/img/zapato.webp" alt="Imagen Zapatos">
-                    </div>
+                <div class="product__card transition padding-2">
+                    <div class="product__img cursor padding-4-h">
+                        <img src="../../../assets/img/zapato.png" alt="Imagen Zapatos">
+                    </div><!-- Imagen del Producto -->
 
-                    <div class="product__description">
-                        <p>Zapatos Casuales Hombre Azul</p>
-                        <p>Bata</p>
+                    <div class="product__description padding-1-v">
+                        <p class="product__description-name margin-1-b">Zapatos Casuales Hombre Azul</p>
+                        <p class="product__description-brand margin-1-b">Bata</p>
+                        <p class="product__description-price margin-2-b">S/. 30.00</p>
 
-                        <div class="product__description-price">
-                            <p>Precio</p>
-                            <p>S/. 30.00</p>
-                        </div>
-
-                        <button type="button">
+                        <button type="button" class="none cursor transition padding-1m-v">
                             <fa-icon [icon]="faCartShopping"></fa-icon>
-                            Añadir
+                            Añadir al carrito
                         </button>
                     </div><!-- Información del Producto -->
                 </div><!-- Tarjeta Producto -->
             </ng-template>
             <ng-template swiperSlide>
-                <div class="product__card">
-                    <div class="product__img">
-                        <img src="../../../assets/img/adidas.png" alt="Imagen Zapatos">
+                <div class="product__card transition padding-2">
+                    <div class="product__img cursor padding-4-h">
+                        <img src="../../../assets/img/zapatilla-3.png" alt="Imagen Zapatos">
                     </div><!-- Imagen del producto -->
 
-                    <div class="product__description">
-                        <p>Zapatos Casuales Hombre Azul</p>
-                        <p>Bata</p>
+                    <div class="product__description padding-1-v">
+                        <p class="product__description-name margin-1-b">Zapatos Casuales Hombre Azul</p>
+                        <p class="product__description-brand margin-1-b">Bata</p>
+                        <p class="product__description-price margin-2-b">S/. 30.00</p>
 
-                        <div class="product__description-price">
-                            <p>Precio</p>
-                            <p>S/. 30.00</p>
-                        </div>
-
-                        <button type="button">
+                        <button type="button" class="none cursor transition padding-1m-v">
                             <fa-icon [icon]="faCartShopping"></fa-icon>
-                            Añadir
+                            Añadir al carrito
                         </button>
                     </div><!-- Información del Producto -->
                 </div><!-- Tarjeta Producto -->
             </ng-template>
             <ng-template swiperSlide>
-                <div class="product__card">
-                    <div class="product__img">
-                        <img src="../../../assets/img/zapatilla.webp" alt="Imagen Zapatos">
-                    </div>
+                <div class="product__card transition padding-2">
+                    <div class="product__img cursor padding-4-h">
+                        <img src="../../../assets/img/sandalia.png" alt="Imagen Zapatos">
+                    </div><!-- Imagen del Producto -->
 
-                    <div class="product__description">
-                        <p>Zapatos Casuales Hombre Azul</p>
-                        <p>Bata</p>
+                    <div class="product__description padding-1-v">
+                        <p class="product__description-name margin-1-b">Zapatos Casuales Hombre Azul</p>
+                        <p class="product__description-brand margin-1-b">Bata</p>
+                        <p class="product__description-price margin-2-b">S/. 30.00</p>
 
-                        <div class="product__description-price">
-                            <p>Precio</p>
-                            <p>S/. 30.00</p>
-                        </div>
-
-                        <button type="button">
+                        <button type="button" class="none cursor transition padding-1m-v">
                             <fa-icon [icon]="faCartShopping"></fa-icon>
-                            Añadir
+                            Añadir al carrito
                         </button>
                     </div><!-- Información del Producto -->
                 </div><!-- Tarjeta Producto -->
             </ng-template>
             <ng-template swiperSlide>
-                <div class="product__card">
-                    <div class="product__img">
+                <div class="product__card transition padding-2">
+                    <div class="product__img cursor padding-4-h">
                         <img src="../../../assets/img/zapatillas.png" alt="Imagen Zapatos">
-                    </div>
+                    </div><!-- Imagen del Producto -->
 
-                    <div class="product__description">
-                        <p>Zapatos Casuales Hombre Azul</p>
-                        <p>Bata</p>
+                    <div class="product__description padding-1-v">
+                        <p class="product__description-name margin-1-b">Zapatos Casuales Hombre Azul</p>
+                        <p class="product__description-brand margin-1-b">Bata</p>
+                        <p class="product__description-price margin-2-b">S/. 30.00</p>
 
-                        <div class="product__description-price">
-                            <p>Precio</p>
-                            <p>S/. 30.00</p>
-                        </div>
-
-                        <button type="button">
+                        <button type="button" class="none cursor transition padding-1m-v">
                             <fa-icon [icon]="faCartShopping"></fa-icon>
-                            Añadir
+                            Añadir al carrito
                         </button>
                     </div><!-- Información del Producto -->
                 </div><!-- Tarjeta Producto -->
             </ng-template>
             <ng-template swiperSlide>
-                <div class="product__card">
-                    <div class="product__img">
+                <div class="product__card transition padding-2">
+                    <div class="product__img cursor padding-4-h">
                         <img src="../../../assets/img/zapatillas.png" alt="Imagen Zapatos">
-                    </div>
+                    </div><!-- Imagen del Producto -->
 
-                    <div class="product__description">
-                        <p>Zapatos Casuales Hombre Azul</p>
-                        <p>Bata</p>
+                    <div class="product__description padding-1-v">
+                        <p class="product__description-name margin-1-b">Zapatos Casuales Hombre Azul</p>
+                        <p class="product__description-brand margin-1-b">Bata</p>
+                        <p class="product__description-price margin-2-b">S/. 30.00</p>
 
-                        <div class="product__description-price">
-                            <p>Precio</p>
-                            <p>S/. 30.00</p>
-                        </div>
-
-                        <button type="button">
+                        <button type="button" class="none cursor transition padding-1m-v">
                             <fa-icon [icon]="faCartShopping"></fa-icon>
-                            Añadir
+                            Añadir al carrito
                         </button>
                     </div><!-- Información del Producto -->
                 </div><!-- Tarjeta Producto -->
             </ng-template>
             <ng-template swiperSlide>
-                <div class="product__card">
-                    <div class="product__img">
+                <div class="product__card transition padding-2">
+                    <div class="product__img cursor padding-4-h">
                         <img src="../../../assets/img/zapatillas.png" alt="Imagen Zapatos">
-                    </div>
+                    </div><!-- Imagen del Producto -->
 
-                    <div class="product__description">
-                        <p>Zapatos Casuales Hombre Azul</p>
-                        <p>Bata</p>
+                    <div class="product__description padding-1-v">
+                        <p class="product__description-name margin-1-b">Zapatos Casuales Hombre Azul</p>
+                        <p class="product__description-brand margin-1-b">Converse</p>
+                        <p class="product__description-price margin-2-b">S/. 130.00</p>
 
-                        <div class="product__description-price">
-                            <p>Precio</p>
-                            <p>S/. 30.00</p>
-                        </div>
-
-                        <button type="button">
+                        <button type="button" class="none cursor transition padding-1m-v">
                             <fa-icon [icon]="faCartShopping"></fa-icon>
-                            Añadir
+                            Añadir al carrito
                         </button>
                     </div><!-- Información del Producto -->
                 </div><!-- Tarjeta Producto -->
             </ng-template>
             <ng-template swiperSlide>
-                <div class="product__card">
-                    <div class="product__img">
-                        <img src="https://coliseum.vteximg.com.br/arquivos/ids/439298-280-280/172656C-0_1.jpg?v=637829814068970000" alt="Imagen Zapatos">
-                    </div>
+                <div class="product__card transition padding-2">
+                    <div class="product__img cursor padding-4-h">
+                        <img src="../../../assets/img/zapatilla-3.png" alt="Imagen Zapatos">
+                    </div><!-- Imagen del Producto -->
 
-                    <div class="product__description">
-                        <p>Zapatos Casuales Hombre Azul</p>
-                        <p>Bata</p>
+                    <div class="product__description padding-1-v">
+                        <p class="product__description-name margin-1-b">Zapatos Casuales Hombre Azul</p>
+                        <p class="product__description-brand margin-1-b">Adidas</p>
+                        <p class="product__description-price margin-2-b">S/. 30.00</p>
 
-                        <div class="product__description-price">
-                            <p>Precio</p>
-                            <p>S/. 30.00</p>
-                        </div>
-
-                        <button type="button">
+                        <button type="button" class="none cursor transition padding-1m-v">
                             <fa-icon [icon]="faCartShopping"></fa-icon>
-                            Añadir
+                            Añadir al carrito
                         </button>
                     </div><!-- Información del Producto -->
                 </div><!-- Tarjeta Producto -->
@@ -208,223 +185,203 @@
         </swiper>
     </div><!-- Productos nuevos -->
 
-    <div class="home__event">
-        <h3>Oferta de 30% de DSCTO</h3>
+    <div class="home__event text-center">
+        <h2>Oferta de 30% de DSCTO</h2>
 
-        <div class="home__event-counter">
-            <div class="home__event-end">
+        <div class="home__event-description">
+            <div class="home__event-end margin-2-v flex-center">
                 <div class="login__or-line"></div>
-                <p>Termina en</p>
+                <p class="padding-1-h">Termina en</p>
                 <div class="login__or-line"></div>
-            </div><!-- Termina -->
+            </div><!-- Evento Texto -->
 
-            <div class="home__event-time">
-                <p>Días</p>
-                <p>365</p>
-            </div>
-            
-            <div class="home__event-time">
-                <p>Horas</p>
-                <p>24</p>
-            </div>
-            
-            <div class="home__event-time">
-                <p>Minutos</p>
-                <p>60</p>
-            </div>
-            
-            <div class="home__event-time">
-                <p>Segundos</p>
-                <p>60</p>
-            </div>
-        </div><!-- Contador -->
+            <div class="home__event-counter">
+                <div class="home__event-time padding-1-v">
+                    <p class="padding-1-v">Días</p>
+                    <p class="padding-1-v">365</p>
+                </div>
+                
+                <div class="home__event-time padding-1-v">
+                    <p class="padding-1-v">Horas</p>
+                    <p class="padding-1-v">24</p>
+                </div>
+                
+                <div class="home__event-time padding-1-v">
+                    <p class="padding-1-v">Minutos</p>
+                    <p class="padding-1-v">60</p>
+                </div>
+                
+                <div class="home__event-time padding-1-v margin-0-b">
+                    <p class="padding-1-v">Segundos</p>
+                    <p class="padding-1-v">60</p>
+                </div>
+            </div><!-- Evento Contador -->
+        </div><!-- Evento Descripción -->
     </div><!-- Eventos -->
 
-    <div class="home__offers">
-        <h2>Ofertas</h2>
+    <div class="home__offers padding-2 contenido">
+        <h2 class="padding-1-v margin-1-h text-center">Ofertas</h2>
         
         <swiper
-            [slidesPerView]="4"
-            [spaceBetween]="30"
+            [slidesPerView]="perviewSlide()"
+            [spaceBetween]="40"
             [slidesPerGroup]="1"
             [loop]="true"
             [loopFillGroupWithBlank]="true"
-            [pagination]="{ clickable: true }"
             [navigation]="true"
-            class="mySwiper"
-            [autoplay]="{ delay: 5000, disableOnInteraction: false }"
+            class="mySwiper offers_products margin-2-v"
+            [autoplay]="{ delay: 6000, disableOnInteraction: false }"
         >
             <ng-template swiperSlide>
-                <div class="product__card">
-                    <img src="../../../assets/img/zapato.png" alt="Imagen Zapatos">
+                <div class="product__card padding-2 transition">
+                    <div class="product__img padding-4-h cursor">
+                        <img src="../../../assets/img/zapato.png" alt="Imagen Zapatos">
+                    </div><!-- Imagen del Producto -->
 
-                    <div class="product__description">
-                        <p>Zapatos Casuales Hombre Azul</p>
-                        <p>Bata</p>
+                    <div class="product__description padding-1-v">
+                        <p class="product__description-name margin-1-b">Zapatos Casuales Hombre Azul</p>
+                        <p class="product__description-brand margin-1-b">Bata</p>
 
-                        <div class="product__price-normal">
-                            <p>Precio Normal</p>
-                            <p>S/. 50.00</p>
+                        <div class="product__description-price margin-2-b">
+                            <p class="product__price-normal">S/. 50.00</p>
+                            <p class="product__price-current">S/. 25.00</p>
                         </div>
 
-                        <div class="product__price-current">
-                            <p>Precio Actual</p>
-                            <p>S/. 25.00</p>
-                        </div>
-
-                        <button type="button">
+                        <button type="button" class="none padding-1m-v cursor transition">
                             <fa-icon [icon]="faCartShopping"></fa-icon>
-                            Añadir
+                            Añadir al carrito
                         </button>
                     </div><!-- Información del Producto -->
                 </div><!-- Tarjeta Producto -->
             </ng-template>
             <ng-template swiperSlide>
-                <div class="product__card">
-                    <img src="../../../assets/img/zapato.webp" alt="Imagen Zapatos">
+                <div class="product__card padding-2 transition">
+                    <div class="product__img padding-4-h cursor">
+                        <img src="../../../assets/img/zapatilla-3.png" alt="Imagen Zapatos">
+                    </div><!-- Imagen del Producto -->
 
-                    <div class="product__description">
-                        <p>Zapatos Casuales Hombre Azul</p>
-                        <p>Bata</p>
+                    <div class="product__description padding-1-v">
+                        <p class="product__description-name margin-1-b">Zapatos Casuales Hombre Azul</p>
+                        <p class="product__description-brand margin-1-b">Bata</p>
 
-                        <div class="product__price-normal">
-                            <p>Precio Normal</p>
-                            <p>S/. 50.00</p>
+                        <div class="product__description-price margin-2-b">
+                            <p class="product__price-normal">S/. 50.00</p>
+                            <p class="product__price-current">S/. 25.00</p>
                         </div>
 
-                        <div class="product__price-current">
-                            <p>Precio Actual</p>
-                            <p>S/. 25.00</p>
-                        </div>
-
-                        <button type="button">
+                        <button type="button" class="none padding-1m-v cursor transition">
                             <fa-icon [icon]="faCartShopping"></fa-icon>
-                            Añadir
+                            Añadir al carrito
                         </button>
                     </div><!-- Información del Producto -->
                 </div><!-- Tarjeta Producto -->
             </ng-template>
             <ng-template swiperSlide>
-                <div class="product__card">
-                    <img src="../../../assets/img/zapato.webp" alt="Imagen Zapatos">
+                <div class="product__card padding-2 transition">
+                    <div class="product__img padding-4-h cursor">
+                        <img src="../../../assets/img/zapato.png" alt="Imagen Zapatos">
+                    </div><!-- Imagen del Producto -->
 
-                    <div class="product__description">
-                        <p>Zapatos Casuales Hombre Azul</p>
-                        <p>Bata</p>
+                    <div class="product__description padding-1-v">
+                        <p class="product__description-name margin-1-b">Zapatos Casuales Hombre Azul</p>
+                        <p class="product__description-brand margin-1-b">Bata</p>
 
-                        <div class="product__price-normal">
-                            <p>Precio Normal</p>
-                            <p>S/. 50.00</p>
+                        <div class="product__description-price margin-2-b">
+                            <p class="product__price-normal">S/. 50.00</p>
+                            <p class="product__price-current">S/. 25.00</p>
                         </div>
 
-                        <div class="product__price-current">
-                            <p>Precio Actual</p>
-                            <p>S/. 25.00</p>
-                        </div>
-
-                        <button type="button">
+                        <button type="button" class="none padding-1m-v cursor transition">
                             <fa-icon [icon]="faCartShopping"></fa-icon>
-                            Añadir
+                            Añadir al carrito
                         </button>
                     </div><!-- Información del Producto -->
                 </div><!-- Tarjeta Producto -->
             </ng-template>
             <ng-template swiperSlide>
-                <div class="product__card">
-                    <img src="../../../assets/img/zapato.webp" alt="Imagen Zapatos">
+                <div class="product__card padding-2 transition">
+                    <div class="product__img padding-4-h cursor">
+                        <img src="../../../assets/img/zapatillas.png" alt="Imagen Zapatos">
+                    </div><!-- Imagen del Producto -->
 
-                    <div class="product__description">
-                        <p>Zapatos Casuales Hombre Azul</p>
-                        <p>Bata</p>
+                    <div class="product__description padding-1-v">
+                        <p class="product__description-name margin-1-b">Zapatos Casuales Hombre Azul</p>
+                        <p class="product__description-brand margin-1-b">Bata</p>
 
-                        <div class="product__price-normal">
-                            <p>Precio Normal</p>
-                            <p>S/. 50.00</p>
+                        <div class="product__description-price margin-2-b">
+                            <p class="product__price-normal">S/. 50.00</p>
+                            <p class="product__price-current">S/. 25.00</p>
                         </div>
 
-                        <div class="product__price-current">
-                            <p>Precio Actual</p>
-                            <p>S/. 25.00</p>
-                        </div>
-
-                        <button type="button">
+                        <button type="button" class="none padding-1m-v cursor transition">
                             <fa-icon [icon]="faCartShopping"></fa-icon>
-                            Añadir
+                            Añadir al carrito
                         </button>
                     </div><!-- Información del Producto -->
                 </div><!-- Tarjeta Producto -->
             </ng-template>
             <ng-template swiperSlide>
-                <div class="product__card">
-                    <img src="../../../assets/img/zapato.webp" alt="Imagen Zapatos">
+                <div class="product__card padding-2 transition">
+                    <div class="product__img padding-4-h cursor">
+                        <img src="../../../assets/img/zapato.png" alt="Imagen Zapatos">
+                    </div><!-- Imagen del Producto -->
 
-                    <div class="product__description">
-                        <p>Zapatos Casuales Hombre Azul</p>
-                        <p>Bata</p>
+                    <div class="product__description padding-1-v">
+                        <p class="product__description-name margin-1-b">Zapatos Casuales Hombre Azul</p>
+                        <p class="product__description-brand margin-1-b">Bata</p>
 
-                        <div class="product__price-normal">
-                            <p>Precio Normal</p>
-                            <p>S/. 50.00</p>
+                        <div class="product__description-price margin-2-b">
+                            <p class="product__price-normal">S/. 50.00</p>
+                            <p class="product__price-current">S/. 25.00</p>
                         </div>
 
-                        <div class="product__price-current">
-                            <p>Precio Actual</p>
-                            <p>S/. 25.00</p>
-                        </div>
-
-                        <button type="button">
+                        <button type="button" class="none padding-1m-v cursor transition">
                             <fa-icon [icon]="faCartShopping"></fa-icon>
-                            Añadir
+                            Añadir al carrito
                         </button>
                     </div><!-- Información del Producto -->
                 </div><!-- Tarjeta Producto -->
             </ng-template>
             <ng-template swiperSlide>
-                <div class="product__card">
-                    <img src="../../../assets/img/zapato.webp" alt="Imagen Zapatos">
+                <div class="product__card padding-2 transition">
+                    <div class="product__img padding-4-h cursor">
+                        <img src="../../../assets/img/zapatillas.png" alt="Imagen Zapatos">
+                    </div><!-- Imagen del Producto -->
 
-                    <div class="product__description">
-                        <p>Zapatos Casuales Hombre Azul</p>
-                        <p>Bata</p>
+                    <div class="product__description padding-1-v">
+                        <p class="product__description-name margin-1-b">Zapatos Casuales Hombre Azul</p>
+                        <p class="product__description-brand margin-1-b">Bata</p>
 
-                        <div class="product__price-normal">
-                            <p>Precio Normal</p>
-                            <p>S/. 50.00</p>
+                        <div class="product__description-price margin-2-b">
+                            <p class="product__price-normal">S/. 50.00</p>
+                            <p class="product__price-current">S/. 25.00</p>
                         </div>
 
-                        <div class="product__price-current">
-                            <p>Precio Actual</p>
-                            <p>S/. 25.00</p>
-                        </div>
-
-                        <button type="button">
+                        <button type="button" class="none padding-1m-v cursor transition">
                             <fa-icon [icon]="faCartShopping"></fa-icon>
-                            Añadir
+                            Añadir al carrito
                         </button>
                     </div><!-- Información del Producto -->
                 </div><!-- Tarjeta Producto -->
             </ng-template>
             <ng-template swiperSlide>
-                <div class="product__card">
-                    <img src="../../../assets/img/zapato.webp" alt="Imagen Zapatos">
+                <div class="product__card padding-2 transition">
+                    <div class="product__img padding-4-h cursor">
+                        <img src="../../../assets/img/zapato.png" alt="Imagen Zapatos">
+                    </div><!-- Imagen del Producto -->
 
-                    <div class="product__description">
-                        <p>Zapatos Casuales Hombre Azul</p>
-                        <p>Bata</p>
+                    <div class="product__description padding-1-v">
+                        <p class="product__description-name margin-1-b">Zapatos Casuales Hombre Azul</p>
+                        <p class="product__description-brand margin-1-b">Bata</p>
 
-                        <div class="product__price-normal">
-                            <p>Precio Normal</p>
-                            <p>S/. 50.00</p>
+                        <div class="product__description-price margin-2-b">
+                            <p class="product__price-normal">S/. 50.00</p>
+                            <p class="product__price-current">S/. 25.00</p>
                         </div>
 
-                        <div class="product__price-current">
-                            <p>Precio Actual</p>
-                            <p>S/. 25.00</p>
-                        </div>
-
-                        <button type="button">
+                        <button type="button" class="none padding-1m-v cursor transition">
                             <fa-icon [icon]="faCartShopping"></fa-icon>
-                            Añadir
+                            Añadir al carrito
                         </button>
                     </div><!-- Información del Producto -->
                 </div><!-- Tarjeta Producto -->
@@ -432,68 +389,70 @@
         </swiper>
     </div><!-- Ofertas -->
 
-    <div class="home__sections">
-        <h2>Secciones</h2>
+    <div class="home__sections contenido">
+        <h2 class="padding-1-v margin-1-h text-center">Secciones</h2>
 
-        <div class="section__woman">
-            <h3>Mujer</h3>
-        </div>
-
-        <div class="section__woman">
-            <h3>Hombre</h3>
-        </div>
-
-        <div class="section__woman">
-            <h3>Niños</h3>
-        </div>
-
-        <div class="section__woman">
-            <h3>Bebes</h3>
-        </div>
+        <div class="home__section-categories margin-4-h">
+            <div class="section__woman margin-2-t cursor">
+                <img class="width-100 height-100" src="../../../assets/img/women-shoes.jpg" alt="Seccion Mujer">
+            </div>
+    
+            <div class="section__men margin-2-t cursor">
+                <img class="width-100 height-100" src="../../../assets/img/men-shoes.jpg" alt="Seccion Hombre">
+            </div>
+    
+            <div class="section__child margin-2-t cursor">
+                <img class="width-100 height-100" src="../../../assets/img/child-shoes.jpg" alt="Seccion Niño">
+            </div>
+    
+            <div class="section__baby margin-2-t cursor">
+                <img class="width-100 height-100" src="../../../assets/img/baby-shoes.jpg" alt="Seccion Bebes">
+            </div>
+        </div><!-- Categorias -->
     </div><!-- Secciones -->
 
-    <div class="home__brands">
-        <h2>Nuestras Marcas</h2>
+    <div class="home__brands padding-2-v contenido">
+        <h2 class="padding-1-v margin-1-h text-center">Nuestras Marcas</h2>
 
-        <div class="content__brands">
-            <img src="../../../assets/img/bata.webp" alt="Marca de Bata">
-            <img src="../../../assets/img/platanitos.svg" alt="Marca de Platanitos">
-            <img src="../../../assets/img/viale.webp" alt="Marca de Viale">
-            <img src="../../../assets/img/calimod.png" alt="Marca de Calimod">
-            <img src="../../../assets/img/adidas.png" alt="Marca de Adidas">
-            <img src="../../../assets/img/nike.png" alt="Marca de Nike">
-            <img src="../../../assets/img/Converse.png" alt="Marca de Converse">
+        <div class="content__brands flex-center margin-4-h margin-1-t">
+            <img class="margin-5" src="../../../assets/img/bata.svg" alt="Marca de Bata">
+            <img class="margin-5" src="../../../assets/img/platanitos.svg" alt="Marca de Platanitos">
+            <img class="margin-5" src="../../../assets/img/viale.webp" alt="Marca de Viale">
+            <img class="margin-5" src="../../../assets/img/calimod.png" alt="Marca de Calimod">
+            <img class="margin-5" src="../../../assets/img/adidas.png" alt="Marca de Adidas">
+            <img class="margin-5" src="../../../assets/img/nike.png" alt="Marca de Nike">
+            <img class="margin-5" src="../../../assets/img/Converse.png" alt="Marca de Converse">
         </div><!-- Contenedor de las marcas -->
     </div><!-- Marcas -->
 
-    <div class="home__benefits">
-        <h2>Beneficios</h2>
+    <div class="home__benefits contenido">
+        <h2 class="padding-1-v margin-1-h text-center">Beneficios</h2>
 
-        <div class="content__benefits">
-            <div>
+        <div class="content__benefits flex-center margin-4-h margin-1-t">
+            <div class="margin-3 text-center margin-2-t">
                 <img src="../../../assets/img/ofertas.png" alt="Imagen de Ofertas">
-                <p>Ofertas Exclusivas</p>
+                <p class="margin-1m-t">Ofertas Exclusivas</p>
             </div>
 
-            <div>
+            <div class="margin-3 text-center">
                 <img src="../../../assets/img/calidad.png" alt="Imagen de Marca de Calidad">
-                <p>Marcas independientes de calidad</p>
+                <p class="margin-1m-t">Marcas independientes de calidad</p>
             </div>
 
-            <div>
+            <div class="margin-3 text-center">
                 <img src="../../../assets/img/envios.png" alt="Imagen de Envios">
-                <p>Envíos a todo el país</p>
+                <p class="margin-1m-t">Envíos a todo el país</p>
             </div>
 
-            <div>
+            <div class="margin-3 text-center">
                 <img src="../../../assets/img/cambios.png" alt="Imagen de Sin Costo">
-                <p>Cambios sin costos</p>
+                <p class="margin-1m-t">Cambios sin costos</p>
             </div>
 
-            <div>
+            <div class="margin-3 text-center margin-5-b">
                 <img src="../../../assets/img/variedad.png" alt="Imagen de Variedad">
-                <p>Amplia variedad de diseños</p>
+                <p class="margin-1m-t">Amplia variedad de diseños</p>
             </div>
         </div><!-- Contenedor de Beneficios -->
     </div><!-- Beneficios -->
-</div>
+</div><!-- Inicio -->

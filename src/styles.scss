@@ -6,7 +6,7 @@
     --fuenteLogo: 'Jockey One', sans-serif;
     --fuenteContenido: 'Open Sans', sans-serif;
     --colorPrincipal: #F8F9FA;
-    --colorEntorno: #E9ECEF;
+    --colorEntorno: #FFFFFF;
     --colorPrincipalOscuro: #212529;
     --colorEntornoOscuro: #343A40;
     --colorContenido: #F77F00;
@@ -37,14 +37,40 @@ body {
     outline: none;
 }
 
+.cursor {
+    cursor: pointer;
+}
+
+.transition {
+    transition: 0.5s ease;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
 .contenido {
-    max-width: 120rem;
+    max-width: 280rem;
     width: 100%;
     margin: auto;
 }
 
 .min-width {
     min-width: 28rem;
+}
+
+// Size
+.width-100 {
+    width: 100%;
+}
+
+.height-100 {
+    height: 100%;
 }
 
 .hidden {
@@ -95,13 +121,81 @@ body {
     padding: 2rem;
 }
 
+.padding-1-v {
+    padding: 1rem 0;
+}
+
+.padding-1m-v {
+    padding: 1.5rem 0;
+}
+
+.padding-2-v {
+    padding: 2rem 0;
+}
+
+.padding-1-h {
+    padding: 0 1rem;
+}
+
+.padding-4-h {
+    padding: 0 4rem;
+}
+
 // Margin
+.margin-2 {
+    margin: 2rem;
+}
+
+.margin-3 {
+    margin: 3rem;
+}
+
+.margin-5 {
+    margin: 5rem;
+}
+
+.margin-1-t {
+    margin-top: 1rem;
+}
+
+.margin-1m-t {
+    margin-top: 1.5rem;
+}
+
+.margin-2-t {
+    margin-top: 2rem;
+}
+
+.margin-0-b {
+    margin-bottom: 0;
+}
+
+.margin-1-b {
+    margin-bottom: 1rem;
+}
+
+.margin-2-b {
+    margin-bottom: 2rem;
+}
+
+.margin-5-b {
+    margin-bottom: 5rem;
+}
+
 .margin-1-v {
     margin: 1rem 0;
 }
 
 .margin-2-v {
     margin: 2rem 0;
+}
+
+.margin-1-h {
+    margin: 0 1rem;
+}
+
+.margin-4-h {
+    margin: 0 4rem;
 }
 
 // flex

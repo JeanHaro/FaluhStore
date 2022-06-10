@@ -10,7 +10,9 @@ import {
   faVolumeHigh, 
   faVolumeLow, 
   faVolumeXmark,
-  faCartShopping
+  faCartShopping,
+  faExpand,
+  faCompress
 } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -35,20 +37,28 @@ export class HomeComponent implements OnInit {
   faVolumeHigh = faVolumeHigh;
   faVolumeLow = faVolumeLow;
   faVolumeXmark = faVolumeXmark;
+  faExpand = faExpand;
   faCartShopping = faCartShopping;
+  faCompress = faCompress;
 
   perviewSlide(): number {
     if (window.innerWidth < 768) {
       let perview = 1;
       return perview;
-    } else if (window.innerWidth < 900) { 
-      let perview = 2;
+    } else if (window.innerWidth < 1100) { 
+      let perview = 3;
       return perview;
-    } else if (window.innerWidth < 1200) {
+    } else if (window.innerWidth < 1400) {
       let perview = 4;
       return perview;
-    } else {
+    } else if (window.innerWidth < 1900) {
+      let perview = 5;
+      return perview;
+    } else if (window.innerWidth < 2300) {
       let perview = 6;
+      return perview;
+    } else {
+      let perview = 7;
       return perview;
     }
   }
