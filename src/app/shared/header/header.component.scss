@@ -1,7 +1,10 @@
 
 // Cabecera
 .header {
-    position: relative;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
     text-align: center;
     background-color: var(--colorPrincipal);
     z-index: 10;
