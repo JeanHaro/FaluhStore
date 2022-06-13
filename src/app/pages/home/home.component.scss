@@ -233,6 +233,15 @@
                     font-size: 1.4rem;
                 }
 
+                .product__description-price {
+                    display: flex;
+                    justify-content: space-around;
+
+                    .product__price-current {
+                        color: var(--colorContenido);
+                    }
+                }
+
                 button {
                     background-color: var(--colorContenido);
                     color: var(--colorPrincipal);
@@ -378,10 +387,6 @@
                 .product__description-price {
                     display: flex;
                     justify-content: space-around;
-
-                    .product__price-normal {
-                        text-decoration: line-through;
-                    }
 
                     .product__price-current {
                         color: var(--colorContenido);

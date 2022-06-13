@@ -1,9 +1,10 @@
 import { Component, OnInit, SimpleChanges, ViewEncapsulation } from '@angular/core';
 
+// Swiper
 import SwiperCore, {Autoplay, Pagination, Navigation} from 'swiper';
-
 SwiperCore.use([Autoplay, Pagination, Navigation]);
 
+// FontAwesome
 import { 
   faPlay, 
   faPause, 
@@ -21,6 +22,7 @@ import {
   styleUrls: ['./home.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
+
 export class HomeComponent implements OnInit {
 
   constructor() { }
@@ -41,6 +43,7 @@ export class HomeComponent implements OnInit {
   faCartShopping = faCartShopping;
   faCompress = faCompress;
 
+  // Slider Productos
   perviewSlide(): number {
     if (window.innerWidth < 768) {
       let perview = 1;

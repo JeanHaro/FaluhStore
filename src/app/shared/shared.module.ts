@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 // Componentes - Shared
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 
 // Componentes
 import { NavComponent } from '../components/nav/nav.component';
@@ -15,11 +16,13 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   declarations: [
     HeaderComponent,
     FooterComponent,
-    NavComponent
+    NavComponent,
+    BreadcrumbsComponent
   ],
   exports: [
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    BreadcrumbsComponent
   ],
   imports: [
     CommonModule,

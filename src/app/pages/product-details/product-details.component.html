@@ -1,1 +1,167 @@
-<p>product-details works!</p>
+<div class="product">
+    <div class="product__detail">
+        <div class="product__detail-img">
+            <img src="../../../assets/img/zapatilla-detail.png" alt="Zapatillas">
+        </div><!-- Imagen -->
+        
+        <div class="product__detail-description">
+            <h2 class="product__description-name">Zapatos Casuales Hombre Azul</h2>
+            <p class="product__description-brand">Converse</p>
+
+            <div class="product__description-price">
+                <p class="product__price-normal">S/. 50.00</p>
+                <!-- <p class="product__price-current">S/. 25.00</p> -->
+            </div><!-- Precio -->
+
+            <div class="product__description-size">
+                <p>Seleccione una talla</p>
+
+                <div class="producto__size-value">
+                    <input type="radio" name="shoe-size" id="size-39">
+                    <label for="size-39">39</label>
+
+                    <input type="radio" name="shoe-size" id="size-40">
+                    <label for="size-40">40</label>
+
+                    <input type="radio" name="shoe-size" id="size-41">
+                    <label for="size-41">41</label>
+
+                    <input type="radio" name="shoe-size" id="size-42">
+                    <label for="size-42">42</label>
+
+                    <input type="radio" name="shoe-size" id="size-43">
+                    <label for="size-43">43</label>
+
+                    <input type="radio" name="shoe-size" id="size-44">
+                    <label for="size-44">44</label>
+                </div>
+            </div><!-- Talla  -->
+
+            <div class="product__description-amount">
+                <p>Cantidad</p>
+
+                <div class="product__amount-value">
+                    <div class="product__value-left">
+                        <fa-icon [icon]="faChevronLeft"></fa-icon>
+                    </div>
+
+                    <input type="text" name="" id="" disabled>
+                    
+                    <div class="product__value-right">
+                        <fa-icon [icon]="faChevronRight"></fa-icon>
+                    </div>
+                </div>
+            </div><!-- Cantidad -->
+
+            <button>
+                <fa-icon [icon]="faCartShopping"></fa-icon>
+                Añadir al Carrito
+            </button>
+        </div><!-- Descripcion -->
+    </div><!-- Detalle del producto -->
+
+    <div class="product__recommended">
+        <h2>Otros Productos</h2>
+
+        <swiper
+            [slidesPerView]="4"
+            [spaceBetween]="30"
+            [pagination]="{
+                clickable: true
+            }"
+            class="mySwiper other__products"
+        >
+            <ng-template swiperSlide>
+                <div class="product__card transition padding-2">
+                    <div class="product__img cursor padding-4-h">
+                        <img src="../../../assets/img/zapatilla-3.png" alt="Imagen Zapatos">
+                    </div><!-- Imagen del producto -->
+
+                    <div class="product__description padding-1-v">
+                        <p class="product__description-name margin-1-b">Zapatos Casuales Hombre Azul</p>
+                        <p class="product__description-brand margin-1-b">Bata</p>
+                        
+                        <div class="product__description-price margin-2-b">
+                            <p class="product__price-normal ">S/. 50.00</p>
+                            <!-- <p class="product__price-current">S/. 25.00</p> -->
+                        </div>
+
+                        <button type="button" class="none cursor transition padding-1m-v">
+                            <fa-icon [icon]="faCartShopping"></fa-icon>
+                            Añadir al carrito
+                        </button>
+                    </div><!-- Información del Producto -->
+                </div><!-- Tarjeta Producto -->
+            </ng-template>
+
+            <ng-template swiperSlide>
+                <div class="product__card transition padding-2">
+                    <div class="product__img cursor padding-4-h">
+                        <img src="../../../assets/img/zapatilla-3.png" alt="Imagen Zapatos">
+                    </div><!-- Imagen del producto -->
+
+                    <div class="product__description padding-1-v">
+                        <p class="product__description-name margin-1-b">Zapatos Casuales Hombre Azul</p>
+                        <p class="product__description-brand margin-1-b">Bata</p>
+                        
+                        <div class="product__description-price margin-2-b">
+                            <p class="product__price-normal ">S/. 50.00</p>
+                            <!-- <p class="product__price-current">S/. 25.00</p> -->
+                        </div>
+
+                        <button type="button" class="none cursor transition padding-1m-v">
+                            <fa-icon [icon]="faCartShopping"></fa-icon>
+                            Añadir al carrito
+                        </button>
+                    </div><!-- Información del Producto -->
+                </div><!-- Tarjeta Producto -->
+            </ng-template>
+
+            <ng-template swiperSlide>
+                <div class="product__card transition padding-2">
+                    <div class="product__img cursor padding-4-h">
+                        <img src="../../../assets/img/zapatilla-3.png" alt="Imagen Zapatos">
+                    </div><!-- Imagen del producto -->
+
+                    <div class="product__description padding-1-v">
+                        <p class="product__description-name margin-1-b">Zapatos Casuales Hombre Azul</p>
+                        <p class="product__description-brand margin-1-b">Bata</p>
+                        
+                        <div class="product__description-price margin-2-b">
+                            <p class="product__price-normal ">S/. 50.00</p>
+                            <!-- <p class="product__price-current">S/. 25.00</p> -->
+                        </div>
+
+                        <button type="button" class="none cursor transition padding-1m-v">
+                            <fa-icon [icon]="faCartShopping"></fa-icon>
+                            Añadir al carrito
+                        </button>
+                    </div><!-- Información del Producto -->
+                </div><!-- Tarjeta Producto -->
+            </ng-template>
+
+            <ng-template swiperSlide>
+                <div class="product__card transition padding-2">
+                    <div class="product__img cursor padding-4-h">
+                        <img src="../../../assets/img/zapatilla-3.png" alt="Imagen Zapatos">
+                    </div><!-- Imagen del producto -->
+
+                    <div class="product__description padding-1-v">
+                        <p class="product__description-name margin-1-b">Zapatos Casuales Hombre Azul</p>
+                        <p class="product__description-brand margin-1-b">Bata</p>
+                        
+                        <div class="product__description-price margin-2-b">
+                            <p class="product__price-normal ">S/. 50.00</p>
+                            <!-- <p class="product__price-current">S/. 25.00</p> -->
+                        </div>
+
+                        <button type="button" class="none cursor transition padding-1m-v">
+                            <fa-icon [icon]="faCartShopping"></fa-icon>
+                            Añadir al carrito
+                        </button>
+                    </div><!-- Información del Producto -->
+                </div><!-- Tarjeta Producto -->
+            </ng-template>
+        </swiper>
+    </div>
+</div>
