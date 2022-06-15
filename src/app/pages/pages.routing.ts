@@ -10,6 +10,7 @@ import { CartComponent } from './cart/cart.component';
 import { ContactComponent } from './contact/contact.component';
 import { OffersComponent } from './offers/offers.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { ProfileComponent } from "./profile/profile.component";
 
 const routes: Routes = [
     {
@@ -22,6 +23,7 @@ const routes: Routes = [
             { path: 'contact', component: ContactComponent },
             { path: 'offers', component: OffersComponent },
             { path: 'product', component: ProductDetailsComponent },
+            { path: 'profile', component: ProfileComponent }
         ]
     }
 ];

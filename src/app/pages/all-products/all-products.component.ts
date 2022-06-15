@@ -3,7 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import {
   faChevronDown,
   faChevronUp,
-  faCheck
+  faCheck,
+  faCartShopping
 } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -22,4 +23,5 @@ export class AllProductsComponent implements OnInit {
   faChevronDown = faChevronDown;
   faChevronUp = faChevronUp;
   faCheck = faCheck;
+  faCartShopping = faCartShopping;
 }

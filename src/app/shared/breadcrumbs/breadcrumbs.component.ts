@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
+import { 
+  faAngleRight
+} from '@fortawesome/free-solid-svg-icons';
+
 @Component({
   selector: 'app-breadcrumbs',
   templateUrl: './breadcrumbs.component.html',
@@ -12,4 +16,6 @@ export class BreadcrumbsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // Iconos
+  faAngleRight = faAngleRight;
 }

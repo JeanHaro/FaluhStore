@@ -1,5 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
+import {
+  faChevronDown,
+  faChevronUp,
+  faCheck,
+  faCartShopping
+} from '@fortawesome/free-solid-svg-icons';
+
 @Component({
   selector: 'app-offers',
   templateUrl: './offers.component.html',
@@ -12,4 +19,9 @@ export class OffersComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // Iconos
+  faChevronDown = faChevronDown;
+  faChevronUp = faChevronUp;
+  faCheck = faCheck;
+  faCartShopping = faCartShopping;
 }

@@ -1,5 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 
+import {
+  faCartShopping,
+  faPencil,
+  faTrash,
+  faCheck,
+  faList
+} from '@fortawesome/free-solid-svg-icons';
+
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
@@ -12,4 +20,10 @@ export class CartComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // Inicio
+  faCartShopping = faCartShopping;
+  faPencil = faPencil;
+  faTrash = faTrash;
+  faCheck = faCheck;
+  faList = faList;
 }

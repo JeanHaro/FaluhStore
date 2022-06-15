@@ -9,6 +9,7 @@ import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { OffersComponent } from './offers/offers.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { ProfileComponent } from './profile/profile.component';
 import { PagesComponent } from './pages.component';
 
 /* Modulos */
@@ -28,6 +29,7 @@ import { SwiperModule } from 'swiper/angular';
     HomeComponent,
     OffersComponent,
     ProductDetailsComponent,
+    ProfileComponent,
     PagesComponent
   ],
   exports: [
@@ -37,6 +39,7 @@ import { SwiperModule } from 'swiper/angular';
     HomeComponent,
     OffersComponent,
     ProductDetailsComponent,
+    ProfileComponent,
     PagesComponent
   ],
   imports: [

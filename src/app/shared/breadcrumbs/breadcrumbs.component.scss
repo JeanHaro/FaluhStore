@@ -1,0 +1,22 @@
+// Breadcrumbs
+.breadcrumbs {
+    // Listado de Breadcrumbs
+    .breandcrumbs__list {
+        display: flex;
+        align-items: center;
+
+        li {
+            color: var(--colorGrisOscuro);
+            
+            &.active {
+                color: var(--colorContenido);
+            }
+        }
+
+        // Icono
+        .breandcrumbs__list-icon {
+            padding: 1rem;
+            color: var(--colorGrisClaro);
+        }
+    }
+}
