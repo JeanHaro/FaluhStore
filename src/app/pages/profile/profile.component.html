@@ -1,1 +1,271 @@
-<p>profile works!</p>
+<div class="profile">
+    <div class="profile__options">
+        <div class="profile__options-img">
+            <img src="" alt="">
+        </div><!-- Imagen -->
+
+        <input type="file" name="" id="">
+
+        <div class="profile__options-nav">
+            <div class="options__nav-profile">
+                <p>Mi perfil</p>
+            </div>
+
+            <div class="options__nav-orders">
+                <p>Pedidos</p>
+            </div>
+
+            <div class="options__nav-setting">
+                <p>Configuración</p>
+            </div>
+        </div><!-- Enlaces - Opciones -->
+    </div><!-- Opciones -->
+
+    <div class="profile__information">
+        <div class="profile__information-profile">
+            <div class="information__profile-major">
+                <p class="information__profile-name">
+                    Jean Haro
+                </p>
+
+                <p class="information__profile-type">
+                    @usuario
+                </p>
+
+                <p class="information__profile-conection">
+                    activo(a) hace 5 minutos
+                </p>
+            </div><!-- Principal -->
+
+            <h2>Información Personal</h2>
+
+            <div class="information__profile-description">
+                <div class="profile__description-left">
+                    <div class="profile__description-email">
+                        <span>Correo:</span>
+                        <p>JeanCHL98@hotmail.com</p>
+                    </div>
+
+                    <div class="profile__description-telephone">
+                        <span>Teléfono:</span>
+                        <p>994466531</p>
+                    </div>
+
+                    <div class="profile__description-address">
+                        <span>Dirección:</span>
+                        <p>Pasaje J 216</p>
+                    </div>
+
+                    <div class="profile__description-gender">
+                        <span>Género:</span>
+                        <p>Hombre</p>
+                    </div>
+                </div>
+
+                <div class="profile__description-right">
+                    <div class="profile__description-dni">  
+                        <span>DNI:</span>
+                        <p>45678222</p>
+                    </div>
+
+                    <div class="profile__description-telephone2">
+                        <span>Teléfono 2:</span>
+                        <p>923158665</p>
+                    </div>
+
+                    <div class="profile__description-orders">
+                        <span>N° Pedidos:</span>
+                        <p>5</p>
+                    </div>
+                </div>
+            </div><!-- Secundario -->
+
+            <div class="information__profile-btn">
+                <button class="none">Actualizar Información</button>
+                <button class="none">Cerrar Sesión</button>
+                <button class="none">Eliminar Cuenta</button>
+            </div><!-- Botones -->
+        </div><!-- Perfil -->
+
+        <div class="profile__information-orders">
+            <div class="information__profile-major">
+                <p class="information__profile-name">
+                    Jean Haro
+                </p>
+
+                <p class="information__profile-type">
+                    @usuario
+                </p>
+
+                <p class="information__profile-conection">
+                    activo(a) hace 5 minutos
+                </p>
+            </div><!-- Principal -->
+
+            <h2>Pedidos Realizados</h2>
+
+            <table>
+                <thead>
+                    <th>#</th>
+                    <th>Fecha</th>
+                    <th>Delivery</th>
+                    <th>Monto</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>06/07/2022</td>
+                        <td>Si</td>
+                        <td>S/. 100.00</td>
+                        <td>Procesando</td>
+                        <td>
+                            <button class="none">Ver</button>
+                            <button class="none">Eliminar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div><!-- Pedidos -->
+
+        <div class="profile__information-setting">
+            <div class="information__profile-major">
+                <p class="information__profile-name">
+                    Jean Haro
+                </p>
+
+                <p class="information__profile-type">
+                    @usuario
+                </p>
+
+                <p class="information__profile-conection">
+                    activo(a) hace 5 minutos
+                </p>
+            </div><!-- Principal -->
+
+            <h2>Configuraciones</h2>
+
+            <div class="information__setting-appearance">
+                <h3>Apariencia Principal</h3>
+
+                <div class="setting__appearance-primary">
+                    <input type="checkbox" name="" id="appearance-primary">
+
+                    <label for="appearance-primary">
+                        <div class="setting__appearance">
+                            <fa-icon class="setting__appearance-icon" [icon]="faCheck"></fa-icon>
+                        </div>
+                    </label>
+                </div><!-- Apariencia Primaria -->
+
+                <div class="setting__appearance-secundary">
+                    <input type="checkbox" name="" id="appearance-secundary">
+
+                    <label for="appearance-secundary">
+                        <div class="setting__appearance">
+                            <fa-icon class="setting__appearance-icon" [icon]="faCheck"></fa-icon>
+                        </div>
+                    </label>
+                </div><!-- Apariencia Secundaria -->
+
+                <h3>Apariencia Secundaria</h3>
+
+                <div class="setting__appearance-red">
+                    <input type="checkbox" name="" id="appearance-red">
+
+                    <label for="appearance-red">
+                        <div class="setting__appearance">
+                            <fa-icon class="setting__appearance-icon" [icon]="faCheck"></fa-icon>
+                        </div>
+                    </label>
+                </div><!-- Apariencia Roja -->
+
+                <div class="setting__appearance-blue">
+                    <input type="checkbox" name="" id="appearance-blue">
+
+                    <label for="appearance-blue">
+                        <div class="setting__appearance">
+                            <fa-icon class="setting__appearance-icon" [icon]="faCheck"></fa-icon>
+                        </div>
+                    </label>
+                </div><!-- Apariencia Azul -->
+
+                <div class="setting__appearance-orange">
+                    <input type="checkbox" name="" id="appearance-orange">
+
+                    <label for="appearance-orange">
+                        <div class="setting__appearance">
+                            <fa-icon class="setting__appearance-icon" [icon]="faCheck"></fa-icon>
+                        </div>
+                    </label>
+                </div><!-- Apariencia Naranja  -->
+
+                <div class="setting__appearance-purple">
+                    <input type="checkbox" name="" id="appearance-purple">
+
+                    <label for="appearance-purple">
+                        <div class="setting__appearance">
+                            <fa-icon class="setting__appearance-icon" [icon]="faCheck"></fa-icon>
+                        </div>
+                    </label>
+                </div><!-- Apariencia Morada-->
+            </div><!-- Apariencias -->
+
+            <div class="information__setting-advanced">
+                <h3>Avanzadas</h3>
+
+                <div class="setting__advanced-options">
+                    <label for="option-delivery">
+                        <input type="checkbox" name="" id="option-delivery">
+                        <div class="advanced__option">
+                            <fa-icon class="advanced__option-icon" [icon]="faCheck"></fa-icon>
+                        </div>
+                        Delivery para todos tus pedidos
+                    </label><!-- Opcion 1 -->
+
+                    <label for="option-animation">
+                        <input type="checkbox" name="" id="option-animation">
+                        <div class="advanced__option">
+                            <fa-icon class="advanced__option-icon" [icon]="faCheck"></fa-icon>
+                        </div>
+                        Quitar animaciones a la página
+                    </label><!-- Opcion 2 -->
+
+                    <label for="option-animation">
+                        <input type="checkbox" name="" id="option-animation">
+                        <div class="advanced__option">
+                            <fa-icon class="advanced__option-icon" [icon]="faCheck"></fa-icon>
+                        </div>
+                        Añadir información personal para realizar pedidos
+                    </label><!-- Opcion 3 -->
+
+                    <label for="option-orders">
+                        <input type="checkbox" name="" id="option-orders">
+                        <div class="advanced__option">
+                            <fa-icon class="advanced__option-icon" [icon]="faCheck"></fa-icon>
+                        </div>
+                        Enviar pedidos realizados al correo electrónico
+                    </label><!-- Opcion 4 -->
+
+                    <label for="option-new">
+                        <input type="checkbox" name="" id="option-new">
+                        <div class="advanced__option">
+                            <fa-icon class="advanced__option-icon" [icon]="faCheck"></fa-icon>
+                        </div>
+                        Enviar notificaciones sobre nuevos productos o promociones al correo electrónico
+                    </label><!-- Opcion 5 -->
+
+                    <label for="option-time">
+                        <input type="checkbox" name="" id="option-time">
+                        <div class="advanced__option">
+                            <fa-icon class="advanced__option-icon" [icon]="faCheck"></fa-icon>
+                        </div>
+                        Mostrar tiempo de ofertas en la página principal
+                    </label><!-- Opcion 5 -->
+                </div><!-- Opciones Avanzadas -->
+            </div><!-- Avanzadas -->
+        </div><!-- Configuración -->
+    </div><!-- Información -->
+</div><!-- Perfil -->
