@@ -5,7 +5,7 @@
         </div><!-- Imagen -->
         
         <div class="product__detail-description">
-            <h2 class="product__description-name">Zapatos Casuales Hombre Azul</h2>
+            <h3 class="product__description-name">Zapatos Casuales Hombre Azul</h3>
             <p class="product__description-brand">Converse</p>
 
             <div class="product__description-price">
@@ -17,24 +17,24 @@
                 <p>Seleccione una talla</p>
 
                 <div class="producto__size-value">
-                    <input type="radio" name="shoe-size" id="size-39">
+                    <input class="hidden" type="radio" name="shoe-size" id="size-39">
                     <label for="size-39">39</label>
 
-                    <input type="radio" name="shoe-size" id="size-40">
+                    <input class="hidden" type="radio" name="shoe-size" id="size-40">
                     <label for="size-40">40</label>
 
-                    <input type="radio" name="shoe-size" id="size-41">
+                    <input class="hidden" type="radio" name="shoe-size" id="size-41">
                     <label for="size-41">41</label>
 
-                    <input type="radio" name="shoe-size" id="size-42">
+                    <input class="hidden" type="radio" name="shoe-size" id="size-42">
                     <label for="size-42">42</label>
 
-                    <input type="radio" name="shoe-size" id="size-43">
+                    <input class="hidden" type="radio" name="shoe-size" id="size-43">
                     <label for="size-43">43</label>
 
-                    <input type="radio" name="shoe-size" id="size-44">
+                    <input class="hidden" type="radio" name="shoe-size" id="size-44">
                     <label for="size-44">44</label>
-                </div>
+                </div><!-- Tamaños -->
             </div><!-- Talla  -->
 
             <div class="product__description-amount">
@@ -45,15 +45,15 @@
                         <fa-icon [icon]="faChevronLeft"></fa-icon>
                     </div>
 
-                    <input type="text" name="" id="" disabled>
+                    <input type="text" name="" id="" disabled value="0">
                     
                     <div class="product__value-right">
                         <fa-icon [icon]="faChevronRight"></fa-icon>
                     </div>
-                </div>
+                </div><!-- Valor -->
             </div><!-- Cantidad -->
 
-            <button>
+            <button class="none">
                 <fa-icon [icon]="faCartShopping"></fa-icon>
                 Añadir al Carrito
             </button>
@@ -64,12 +64,12 @@
         <h2>Otros Productos</h2>
 
         <swiper
-            [slidesPerView]="4"
-            [spaceBetween]="30"
+            [slidesPerView]="perviewSlide()"
+            [spaceBetween]="43"
             [pagination]="{
                 clickable: true
             }"
-            class="mySwiper other__products"
+            class="mySwiper other__products margin-2-v"
         >
             <ng-template swiperSlide>
                 <div class="product__card transition padding-2">
@@ -163,5 +163,5 @@
                 </div><!-- Tarjeta Producto -->
             </ng-template>
         </swiper>
-    </div>
+    </div><!-- Productos recomendados -->
 </div>
